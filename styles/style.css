@@ -1,0 +1,75 @@
+.page {
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.header {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: flex;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.intro {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.epigraph {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.highway {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.bikes {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.training {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  border: 0;
+  color: #151515;
+  background-color: #f4f4f4;
+}/*# sourceMappingURL=style.css.map */

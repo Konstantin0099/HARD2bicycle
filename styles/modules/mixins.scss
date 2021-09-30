@@ -1,0 +1,14 @@
+@mixin mp ($marginTop: 0, $marginLeft: $marginTop, $paddingTop: 0, $paddingLeft: $paddingTop){
+    margin: $marginTop $marginLeft;
+    padding: $paddingTop $paddingLeft;
+}
+@mixin display ($display: block, $maxwidth: $desktopMaxWidh) {
+    max-width: $maxwidth;
+    display: $display;
+    border: 0;
+}
+
+@mixin color ($textColor: #151515, $backgroundColor: #f4f4f4){
+    color: $textColor;
+    background-color: $backgroundColor;
+}

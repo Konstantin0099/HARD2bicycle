@@ -1,0 +1,6 @@
+.page {
+    @include mp();
+    @include display ($display: block);
+    @include color();
+    
+}
