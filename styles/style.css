@@ -1,75 +1,253 @@
+footer {
+  border: 1px red dashed;
+  height: 3000px;
+}
+
+section {
+  border: 1px red dashed;
+}
+
 .page {
+  position: relative;
+  width: 100%;
   margin: 0 0;
   padding: 0 0;
   max-width: 1440px;
   display: block;
-  border: 0;
   color: #151515;
   background-color: #f4f4f4;
+  margin: 0 auto;
 }
 
 .header {
-  width: 100%;
+  height: 74px;
   margin: 0 0;
   padding: 0 0;
   max-width: 1440px;
   display: flex;
-  border: 0;
   color: #151515;
   background-color: #f4f4f4;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .intro {
-  width: 100%;
   margin: 0 0;
   padding: 0 0;
   max-width: 1440px;
-  display: block;
-  border: 0;
+  display: flex;
   color: #151515;
   background-color: #f4f4f4;
+  padding-top: 20px;
+  max-height: 856px;
+  flex-direction: row;
+  position: relative;
 }
-
-.epigraph {
-  width: 100%;
-  margin: 0 0;
-  padding: 0 0;
-  max-width: 1440px;
-  display: block;
-  border: 0;
-  color: #151515;
+.intro__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  visibility: hidden;
+  opacity: 1;
+  justify-content: center;
+}
+.intro__bike-fix {
+  opacity: 1;
   background-color: #f4f4f4;
+  visibility: visible;
+  z-index: 1;
+  top: 276px;
+  position: sticky;
+  margin: 100px 100px;
+  padding: 20px 50px;
+  border-radius: 20px;
+  box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  align-self: center;
+  transform: translate(7vw, 0);
+}
+.intro__image {
+  width: 44%;
+  z-index: 0;
+  padding-top: 20px;
+  right: 0;
+  position: sticky;
+  margin-left: auto;
 }
 
 .highway {
-  width: 100%;
   margin: 0 0;
   padding: 0 0;
   max-width: 1440px;
   display: block;
-  border: 0;
   color: #151515;
   background-color: #f4f4f4;
 }
 
 .bikes {
-  width: 100%;
   margin: 0 0;
   padding: 0 0;
   max-width: 1440px;
   display: block;
-  border: 0;
   color: #151515;
   background-color: #f4f4f4;
 }
 
 .training {
-  width: 100%;
   margin: 0 0;
   padding: 0 0;
   max-width: 1440px;
   display: block;
-  border: 0;
   color: #151515;
   background-color: #f4f4f4;
+}
+
+.footer {
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  color: #151515;
+  background-color: #f4f4f4;
+}
+
+.intro-text {
+  display: block;
+  letter-spacing: normal;
+}
+.intro-text__title {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  opacity: 1;
+}
+.intro-text__your-choice {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: normal;
+  color: #222222;
+  opacity: 0.7;
+}
+.intro-text__more-detailed-button {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 1;
+}
+.intro-text__bike-name {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #151515;
+  opacity: 1;
+}
+
+.intro1-text {
+  display: block;
+  letter-spacing: normal;
+}
+.intro1-text__title {
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  opacity: 1;
+}
+.intro1-text__your-choice {
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: normal;
+  color: #222222;
+  opacity: 0.7;
+}
+.intro1-text__more-detailed-button {
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 1;
+}
+.intro1-text__bike-name {
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #151515;
+  opacity: 1;
+}
+
+.intro1 {
+  overflow: hidden;
+  margin: 0 0;
+  padding: 0 0;
+  max-width: 1440px;
+  display: block;
+  color: #151515;
+  background-color: #f4f4f4;
+  padding-top: 20px;
+  max-height: 856px;
+}
+.intro1__overlay {
+  float: right;
+  width: 17vw;
+  height: 100%;
+  display: flex;
+  visibility: hidden;
+  opacity: 1;
+  justify-content: center;
+}
+.intro1__bike-fix {
+  opacity: 1;
+  background-color: #f4f4f4;
+  visibility: visible;
+  z-index: 1;
+  top: 276px;
+  position: sticky;
+  margin: 100px 0px;
+  padding: 20px 50px;
+  border-radius: 20px;
+  box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
+  width: 20vh;
+  transform: translate(7vw, 0);
+}
+.intro1__image {
+  float: right;
+  width: 44%;
+  z-index: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,9 @@
 .header {
-    width: 100%;
+    height: 74px;
     @include mp();
     @include display($display: flex);
     @include color();
-    
+    position: sticky;
+    top:0;
+    z-index: 2;
 }

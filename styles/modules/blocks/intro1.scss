@@ -1,0 +1,53 @@
+.intro1 {
+    overflow: hidden;
+  @include mp();
+  @include display();
+  @include color();
+  padding-top: 20px;
+  max-height: 856px;
+  // flex-direction: row;
+  // position: relative;
+
+  &__overlay {
+    float: right;
+    width: 17vw;
+    height: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+    display: flex;
+    visibility: hidden;
+    opacity: 1;
+    justify-content: center;
+  }
+
+  &__bike-fix {
+    // float: right;
+    opacity: 1;
+    background-color: $backgroundColor;
+    visibility: visible;
+    z-index: 1;
+    top: 276px;
+    position: sticky;
+    @include mp(100px, 0px, 20px, 50px);
+    border-radius: 20px;
+    box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
+    width: 20vh;
+    // object-fit: contain;
+    // object-position: center;
+    // align-self: center;
+    transform: translate(7vw, 0);
+  }
+
+  &__image {
+    float: right;
+    width: 44%;
+    z-index: 0;
+    //   padding-top: 20px;
+    //   right: 0;
+    //   position: sticky;
+    //   margin-left: auto;
+  }
+}

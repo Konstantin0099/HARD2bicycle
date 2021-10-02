@@ -1,7 +1,50 @@
 .intro {
-    width: 100%;
-    @include mp();
-    @include display();
-    @include color();
+  @include mp();
+  @include display($display: flex);
+  @include color();
+  padding-top: 20px;
+  max-height: 856px;
+  flex-direction: row;
+  position: relative;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    visibility: hidden;
+    opacity: 1;
+    justify-content: center;
+  }
+
+  &__bike-fix {
+
+    opacity: 1;
+    background-color: $backgroundColor;
+    visibility: visible;
+    // max-height: 260px;
     
+    z-index: 1;
+    top: 276px;
+    position: sticky;
+    @include mp(100px, 100px, 20px, 50px);
+    border-radius: 20px;
+    box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
+    object-fit: contain;
+    object-position: center;
+    align-self: center;
+    transform: translate(7vw, 0);
+  }
+  &__image {
+
+    width: 44%;
+    z-index: 0;
+    padding-top: 20px;
+    right: 0;
+    position: sticky;
+    margin-left: auto;
+  }
+ 
 }
