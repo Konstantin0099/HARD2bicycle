@@ -1,6 +1,6 @@
 .bikes {
     // width: 100%;
-    @include mp();
+    // @include mp(0, 0);
     @include display();
     @include color();
     

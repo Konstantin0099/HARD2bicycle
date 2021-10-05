@@ -1,6 +1,6 @@
 footer {
   border: 1px red dashed;
-  height: 3000px;
+  height: 300px;
 }
 
 section {
@@ -10,90 +10,110 @@ section {
 .page {
   position: relative;
   width: 100%;
-  margin: 0 0;
-  padding: 0 0;
   max-width: 1440px;
   display: block;
   color: #151515;
   background-color: #f4f4f4;
   margin: 0 auto;
+  padding-left: 120px;
+  box-sizing: border-box;
 }
 
+@media screen and (max-width: 1240px) {
+  .page {
+    padding-left: 90px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .page {
+    padding-left: 60px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .page {
+    padding-left: 30px;
+  }
+}
 .header {
   height: 74px;
-  margin: 0 0;
-  padding: 0 0;
+  margin: 0 0 0 0;
+  padding: 28px 120px 28px 0;
   max-width: 1440px;
   display: flex;
   color: #151515;
   background-color: #f4f4f4;
+  flex-direction: row;
+  justify-content: flex-end;
   position: sticky;
   top: 0;
   z-index: 2;
+  box-sizing: border-box;
+}
+.header__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.header__item-nav {
+  margin-left: 34px;
+}
+.header__nav {
+  text-decoration: none;
+  font-family: inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 106%;
+  color: #151515;
 }
 
-.intro {
-  margin: 0 0;
-  padding: 0 0;
-  max-width: 1440px;
-  display: flex;
+.surfaceAndGradients {
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  grid-template-areas: "title" "description" "slide" "button";
+  margin: 0;
+  padding: 0;
+  width: 100%;
   color: #151515;
   background-color: #f4f4f4;
-  padding-top: 20px;
-  max-height: 856px;
-  flex-direction: row;
-  position: relative;
 }
-.intro__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  visibility: hidden;
-  opacity: 1;
-  justify-content: center;
-}
-.intro__bike-fix {
-  opacity: 1;
-  background-color: #f4f4f4;
-  visibility: visible;
-  z-index: 1;
-  top: 276px;
-  position: sticky;
-  margin: 100px 100px;
-  padding: 20px 50px;
-  border-radius: 20px;
-  box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
-  -o-object-fit: contain;
-     object-fit: contain;
+.surfaceAndGradients__image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   -o-object-position: center;
      object-position: center;
-  align-self: center;
-  transform: translate(7vw, 0);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.intro__image {
-  width: 44%;
-  z-index: 0;
-  padding-top: 20px;
-  right: 0;
-  position: sticky;
-  margin-left: auto;
-}
-
-.highway {
-  margin: 0 0;
-  padding: 0 0;
-  max-width: 1440px;
+.surfaceAndGradients__slides {
   display: block;
-  color: #151515;
-  background-color: #f4f4f4;
+  grid-area: slide;
+}
+.surfaceAndGradients__slides_text {
+  grid-area: description;
+}
+.surfaceAndGradients__slides_title {
+  grid-area: title;
+}
+.surfaceAndGradients__slide-text {
+  margin: 40px 0 80px;
+  max-width: 460px;
+}
+.surfaceAndGradients__slide-title {
+  margin: 60px 0 10px 0;
+  width: 25%;
 }
 
 .bikes {
-  margin: 0 0;
-  padding: 0 0;
   max-width: 1440px;
   display: block;
   color: #151515;
@@ -101,8 +121,6 @@ section {
 }
 
 .training {
-  margin: 0 0;
-  padding: 0 0;
   max-width: 1440px;
   display: block;
   color: #151515;
@@ -110,144 +128,139 @@ section {
 }
 
 .footer {
-  margin: 0 0;
-  padding: 0 0;
   max-width: 1440px;
   display: block;
   color: #151515;
   background-color: #f4f4f4;
 }
 
-.intro-text {
-  display: block;
-  letter-spacing: normal;
-}
-.intro-text__title {
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-  color: #151515;
-  opacity: 1;
-}
-.intro-text__your-choice {
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: normal;
-  color: #222222;
-  opacity: 0.7;
-}
-.intro-text__more-detailed-button {
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  color: #ffffff;
-  opacity: 1;
-}
-.intro-text__bike-name {
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: normal;
-  color: #151515;
-  opacity: 1;
-}
-
-.intro1-text {
-  display: block;
-  letter-spacing: normal;
-}
-.intro1-text__title {
-  display: block;
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 55px;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-  color: #151515;
-  opacity: 1;
-}
-.intro1-text__your-choice {
-  display: block;
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: normal;
-  color: #222222;
-  opacity: 0.7;
-}
-.intro1-text__more-detailed-button {
-  display: block;
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  color: #ffffff;
-  opacity: 1;
-}
-.intro1-text__bike-name {
-  display: block;
-  font-family: "inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: normal;
-  color: #151515;
-  opacity: 1;
-}
-
-.intro1 {
-  overflow: hidden;
-  margin: 0 0;
-  padding: 0 0;
+.intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  grid-template-rows: 20% 20% 10% 50%;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  grid-template-areas: "title image" "your-choice image" "more-detailed-button image" "bike-name image";
+  margin: 0;
+  padding: 0;
   max-width: 1440px;
-  display: block;
-  color: #151515;
-  background-color: #f4f4f4;
-  padding-top: 20px;
-  max-height: 856px;
+  display: none;
 }
-.intro1__overlay {
-  float: right;
-  width: 17vw;
-  height: 100%;
+.intro__title {
+  grid-area: title;
+}
+.intro__description {
+  grid-area: your-choice;
+}
+.intro__overlay {
+  border: hotpink 1px solid;
+  grid-area: image;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   visibility: hidden;
   opacity: 1;
-  justify-content: center;
 }
-.intro1__bike-fix {
-  opacity: 1;
+.intro__bike-fix {
+  width: calc(340px - ((1440px - 100vw) * 0.14));
   background-color: #f4f4f4;
   visibility: visible;
   z-index: 1;
-  top: 276px;
+  top: 300px;
   position: sticky;
-  margin: 100px 0px;
-  padding: 20px 50px;
+  margin-bottom: 79px;
+  margin-top: 300px;
   border-radius: 20px;
   box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
-  width: 20vh;
-  transform: translate(7vw, 0);
+  align-self: center;
+  box-sizing: content-box;
+  max-width: 340px;
 }
-.intro1__image {
-  float: right;
-  width: 44%;
-  z-index: 0;
+.intro__image {
+  width: calc(610px - ((1440px - 100vw) * 0.32));
+  justify-self: end;
+  grid-area: image;
+  max-width: 610px;
+}
+.intro__more-detailed-button {
+  grid-area: more-detailed-button;
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 1;
+}
+.intro__bike-name {
+  grid-area: bike-name;
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: #151515;
+  opacity: 1;
+}
+
+.title {
+  display: block;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(55px - ((1440px - 100vw) * 0.021));
+  line-height: 90%;
+  letter-spacing: -0.5px;
+  color: #151515;
+  opacity: 1;
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 55px;
+  }
+}
+.description {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: normal;
+  color: #222222;
+  opacity: 0.7;
+}
+
+.button-slide {
+  display: inline-block;
+  border: 17px solid #EBEBEB;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #EBEBEB;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  grid-area: button;
+}
+.button-slide_next {
+  margin-left: 70px;
+  background-image: url("../../../images/button/button-slide-next.svg");
+  -o-object-position: center;
+     object-position: center;
+}
+.button-slide_prev {
+  background-image: url("../../../images/button/button-slide-prev.svg");
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=style.css.map */

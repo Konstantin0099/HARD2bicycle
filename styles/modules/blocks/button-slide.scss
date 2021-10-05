@@ -1,0 +1,24 @@
+.button-slide {
+    display: inline-block;
+    border: 17px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #EBEBEB;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    grid-area: button;
+    &_next {
+    margin-left: 70px;
+    background-image: url("../../../images/button/button-slide-next.svg");
+    object-position: center;
+};
+
+&_prev {
+    background-image: url("../../../images/button/button-slide-prev.svg");
+    object-position: center;
+}
+}

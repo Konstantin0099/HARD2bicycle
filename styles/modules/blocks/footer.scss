@@ -1,5 +1,5 @@
 .footer {
-    @include mp();
+    // @include mp();
     @include display ($display: block);
     @include color();
     

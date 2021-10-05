@@ -1,12 +1,17 @@
-@mixin mp(
-  $marginTop: 0,
-  $marginLeft: $marginTop,
-  $paddingTop: 0,
-  $paddingLeft: $paddingTop
-) {
-  margin: $marginTop $marginLeft;
-  padding: $paddingTop $paddingLeft;
+@mixin mp($mt: 0, $mr: 0, $mb: 0, $ml: 0, $padding...)
+ {
+  margin: $mt $mr $mb $ml;
+  padding: $padding;
 }
+// @mixin mp(
+//   $marginTop: 0,
+//   $marginLeft: $marginTop,
+//   $paddingTop: 0,
+//   $paddingLeft: $paddingTop
+// ) {
+//   margin: $marginTop $marginLeft;
+//   padding: $paddingTop $paddingLeft;
+// }
 @mixin display($display: block, $maxwidth: $desktopMaxWidh) {
   max-width: $maxwidth;
   display: $display;

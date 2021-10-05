@@ -1,8 +1,25 @@
 .page {
     position: relative;
     width: 100%;
-    @include mp();
+    // @include mp();
     @include display ($display: block);
     @include color();
    margin: 0 auto;
+   padding-left: 120px;
+   box-sizing: border-box;
 }
+@media screen and (max-width: 1240px) {
+    .page {
+        padding-left: 90px;
+    }
+  }
+@media screen and (max-width: 1040px) {
+    .page {
+        padding-left: 60px;
+    }
+  }
+@media screen and (max-width: 840px) {
+    .page {
+        padding-left: 30px;
+    }
+  }

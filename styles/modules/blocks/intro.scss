@@ -1,50 +1,136 @@
 .intro {
-  @include mp();
-  @include display($display: flex);
-  @include color();
-  padding-top: 20px;
-  max-height: 856px;
-  flex-direction: row;
   position: relative;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  grid-template-rows: 20% 20% 10% 50%;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  grid-template-areas:
+    "title image"
+    "your-choice image"
+    "more-detailed-button image"
+    "bike-name image";
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  // элемент выключен                элемент выключен 
+  display: none; 
+
+
+  &__title {
+    grid-area: title;}
+
+  &__description {
+    grid-area: your-choice;}
+
 
   &__overlay {
+    border: hotpink 1px solid;
+    grid-area: image;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     display: flex;
     visibility: hidden;
     opacity: 1;
-    justify-content: center;
   }
 
   &__bike-fix {
-
-    opacity: 1;
+    width: (calc(340px - ((1440px - 100vw) * 0.14)));
+    // justify-content: start;
+    // opacity: 1;
     background-color: $backgroundColor;
     visibility: visible;
-    // max-height: 260px;
-    
     z-index: 1;
-    top: 276px;
+    top: 300px;
     position: sticky;
-    @include mp(100px, 100px, 20px, 50px);
+    // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
+    margin-bottom: 79px;
+    margin-top: 300px;
     border-radius: 20px;
     box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
-    object-fit: contain;
-    object-position: center;
     align-self: center;
-    transform: translate(7vw, 0);
+    // transform: translate(0vw, 0);
+    box-sizing: content-box;
+    max-width: 340px;
   }
-  &__image {
+  // @media screen and (min-width: 1440px) {
+  //   &__bike-fix {
+  //     width: 340px;
+  //   }
+  // }
 
-    width: 44%;
-    z-index: 0;
-    padding-top: 20px;
-    right: 0;
-    position: sticky;
-    margin-left: auto;
+  &__image {
+    width: (calc(610px - ((1440px - 100vw) * 0.32)));
+    justify-self: end;
+    grid-area: image;
+    max-width: 610px;
   }
- 
+  // @media screen and (min-width: 1440px) {
+  //   &__image {
+  //     width: 610px;
+  //   }
+  // }
+
+
+
+  &__more-detailed-button {
+    grid-area: more-detailed-button;
+    display: block;
+    @include font(
+      $family: "inter",
+      $fontStyle: normal,
+      $fontWeight: 600,
+      $fontSize: 14px,
+      $lineHeight: 18px,
+      $letterSpacing: 1px,
+      $collorText: #ffffff
+    );
+  }
+  &__bike-name {
+    grid-area: bike-name;
+    display: block;
+    @include font(
+      $family: "inter",
+      $fontStyle: normal,
+      $fontWeight: 400,
+      $fontSize: 18px,
+      $lineHeight: 18px
+    );
+  }
+}
+
+.title {
+  display: block;
+  @include font(
+    $family: "inter",
+    $fontStyle: normal,
+    $fontWeight: 700,
+    $fontSize: (
+      calc(55px - ((1440px - 100vw) * 0.021)),
+    ),
+    // $fontSize: 3.82vw,
+    $lineHeight: 90%,
+    $letterSpacing: -0.5px
+  );
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 55px;
+  }
+}
+
+.description {
+  // display: block;
+  @include font(
+    $family: "inter",
+    $fontStyle: normal,
+    $fontWeight: 400,
+    $fontSize: 18px,
+    // $fontSize: (
+    //   calc(18px - ((1440px - 100vw) * 0.0054)),
+    // ),
+    $lineHeight: 28px,
+    $collorText: #222222,
+    $opacity: 0.7
+  );
 }
