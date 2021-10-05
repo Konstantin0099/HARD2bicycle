@@ -1,6 +1,5 @@
 .training {
-    width: 100%;
-    @include mp();
+    // @include mp();
     @include display();
     @include color();
     

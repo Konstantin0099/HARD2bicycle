@@ -1,0 +1,61 @@
+.surfaceAndGradients {
+    overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+//   grid-template-rows: 13% 26% 1fr 17%;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  grid-template-areas:
+    "title"
+    "description"
+    "slide"
+    "button";
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+//   @include mp();
+//   @include display();
+  @include color();
+
+  &__image {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    // width: 650px;
+    // height: 400px;
+  }
+  &__slides { display: block;
+    grid-area: slide;
+  }
+  &__slides_text {
+    // display: block;
+    grid-area: description;
+    // grid-template-rows: 1fr;
+  }
+  &__slides_title {
+    // display: block;
+    grid-area: title;
+  }
+
+  &__slide-text {
+    // font-size: 18px;
+    // line-height: 128.53%;
+    margin: 40px 0 80px;
+    // display: block;
+    max-width: 460px;
+    // font-family: Inter;
+    // font-style: 400;
+    // opacity: 70%;
+    // color: #222222;
+  }
+
+  &__slide-title {
+    margin: 60px 0 10px 0;
+    width: 25%;
+  }
+}
