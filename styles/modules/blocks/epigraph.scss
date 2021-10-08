@@ -1,6 +1,46 @@
 .epigraph {
-    // width: 100%;
-    // @include mp();
-    // @include display();
-    // @include color();
+  margin-right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  // width: 100%;
+  // @include mp();
+  // @include display();
+  // @include color();
+  &__image {
+    margin: 0;
+    display: flex;
+    object-fit: cover;
+    flex-wrap: wrap;
+    width: 54%;
+  }
+  &__img {
+    margin: 0;
+    display: flex;
+    width: 100%;
+  }
+  &__quote {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32%;
+  }
+  &__blockquote {
+    margin: 0;
+  }
+  &__text {
+    margin: 0;
+    display: block;
+  }
+  &__caption {
+    margin: 0;
+    display: block;
+  }
+  &__cite {
+    margin: 0;
+    display: block;
+  }
 }

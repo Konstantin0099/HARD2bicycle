@@ -67,6 +67,50 @@ footer {
   color: #151515;
 }
 
+.epigraph {
+  margin-right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.epigraph__image {
+  margin: 0;
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-wrap: wrap;
+  width: 54%;
+}
+.epigraph__img {
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+.epigraph__quote {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32%;
+}
+.epigraph__blockquote {
+  margin: 0;
+}
+.epigraph__text {
+  margin: 0;
+  display: block;
+}
+.epigraph__caption {
+  margin: 0;
+  display: block;
+}
+.epigraph__cite {
+  margin: 0;
+  display: block;
+}
+
 .surfaceAndGradients {
   overflow: hidden;
   position: relative;
@@ -118,6 +162,7 @@ footer {
   display: block;
   color: #151515;
   background-color: #f4f4f4;
+  display: none;
 }
 .bikes__header {
   display: flex;
