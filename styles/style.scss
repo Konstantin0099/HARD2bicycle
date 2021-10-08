@@ -1,5 +1,4 @@
-footer {border: 1px red dashed; height: 300px};
-section {border: 1px red dashed};
+footer {border: 0.5px rgb(76, 207, 59) dashed; height: 300px};
 @import "./modules/variables.scss";
 @import "./modules/mixins.scss";
 @import "./modules/blocks/page.scss";
@@ -7,8 +6,11 @@ section {border: 1px red dashed};
 @import "./modules/blocks/epigraph.scss";
 @import "./modules/blocks/surfaceAndGradients.scss";
 @import "./modules/blocks/bikes.scss";
+@import "./modules/blocks/bike.scss";
 @import "./modules/blocks/training.scss";
 @import "./modules/blocks/footer.scss";
 @import "./modules/blocks/intro.scss";
-@import "./modules/blocks/button-slide.scss";
+@import "./modules/blocks/highway-slides.scss";
+@import "./modules/blocks/TT-slides.scss";
+@import "./modules/blocks/gravel-slides.scss";
 

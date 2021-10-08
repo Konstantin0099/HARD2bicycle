@@ -13,22 +13,24 @@
   margin: 0;
   padding: 0;
   max-width: 1440px;
-  // элемент выключен                элемент выключен 
-  display: none; 
-
+  // элемент выключен                элемент выключен
+  display: none;
 
   &__title {
-    grid-area: title;}
+    grid-area: title;
+  }
 
   &__description {
-    grid-area: your-choice;}
-
+    grid-area: your-choice;
+  }
 
   &__overlay {
-    border: hotpink 1px solid;
     grid-area: image;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     visibility: hidden;
     opacity: 1;
@@ -47,6 +49,7 @@
     margin-bottom: 79px;
     margin-top: 300px;
     border-radius: 20px;
+    padding: 20px;
     box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
     align-self: center;
     // transform: translate(0vw, 0);
@@ -70,8 +73,6 @@
   //     width: 610px;
   //   }
   // }
-
-
 
   &__more-detailed-button {
     grid-area: more-detailed-button;
@@ -100,7 +101,7 @@
 }
 
 .title {
-  display: block;
+  display: inline-block;
   @include font(
     $family: "inter",
     $fontStyle: normal,

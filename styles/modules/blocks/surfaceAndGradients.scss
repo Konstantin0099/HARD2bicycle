@@ -20,6 +20,10 @@
 //   @include display();
   @include color();
 
+// ЭЛЕМЕНТ ВЫКЛЮЧЕН НА ПЕРИОД РАЗРАБОТКИ
+  display: none; 
+
+
   &__image {
     margin: 0;
     padding: 0;
