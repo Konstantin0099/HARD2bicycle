@@ -1,6 +1,64 @@
 .training {
-    // @include mp();
-    @include display();
-    @include color();
-    
+  // @include mp();
+  //   @include display();
+  @include color();
+  margin-top: 150px;
+  margin-right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+// секция отключена на период разработки==========================
+  display: none;
+
+  &__text {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32%;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    display: block;
+  }
+  &__paragraph {
+    margin: 0;
+    display: block;
+  }
+  &__strava {
+    margin: 0;
+    display: block;
+  }
+  &__komoot {
+    margin: 0;
+    display: block;
+  }
+  &__image {
+    margin: 0;
+    display: flex;
+    object-fit: cover;
+    flex-wrap: wrap;
+    width: 54%;
+  }
+  &__img {
+    margin: 0;
+    display: flex;
+    width: 100%;
+  }
+  &__links{ 
+      padding: 0;
+      width: 100px;
+      margin: 0;
+      margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+  }
+&__link{
+display: block;
+}
 }

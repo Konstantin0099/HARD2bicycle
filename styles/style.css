@@ -98,7 +98,7 @@ footer {
 .epigraph__blockquote {
   margin: 0;
 }
-.epigraph__text {
+.epigraph__title {
   margin: 0;
   display: block;
 }
@@ -231,10 +231,63 @@ footer {
 }
 
 .training {
-  max-width: 1440px;
-  display: block;
   color: #151515;
   background-color: #f4f4f4;
+  margin-top: 150px;
+  margin-right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.training__text {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32%;
+}
+.training__title {
+  margin: 0;
+  margin-bottom: 50px;
+  display: block;
+}
+.training__paragraph {
+  margin: 0;
+  display: block;
+}
+.training__strava {
+  margin: 0;
+  display: block;
+}
+.training__komoot {
+  margin: 0;
+  display: block;
+}
+.training__image {
+  margin: 0;
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-wrap: wrap;
+  width: 54%;
+}
+.training__img {
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+.training__links {
+  padding: 0;
+  width: 100px;
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.training__link {
+  display: block;
 }
 
 .footer {
