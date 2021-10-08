@@ -1,13 +1,10 @@
 footer {
-  border: 1px red dashed;
+  border: 0.5px #4ccf3b dashed;
   height: 300px;
 }
 
-section {
-  border: 1px red dashed;
-}
-
 .page {
+  overflow: hidden;
   position: relative;
   width: 100%;
   max-width: 1440px;
@@ -84,6 +81,7 @@ section {
   width: 100%;
   color: #151515;
   background-color: #f4f4f4;
+  display: none;
 }
 .surfaceAndGradients__image {
   margin: 0;
@@ -114,10 +112,77 @@ section {
 }
 
 .bikes {
+  padding-right: 80px;
+  box-sizing: content-box;
   max-width: 1440px;
   display: block;
   color: #151515;
   background-color: #f4f4f4;
+}
+.bikes__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bikes__slides {
+  margin: 0 auto;
+}
+.bikes__swiper-wraper {
+  margin: 0;
+  padding: 0;
+}
+.bikes__pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto 0;
+  max-width: 250px;
+  height: 28px;
+}
+.bikes__swiper-button-prev {
+  margin-left: 100px;
+  width: 50px;
+  height: 30px;
+  background-color: blue;
+}
+.bikes__swiper-button-next {
+  width: 50px;
+  height: 30px;
+  background-color: yellowgreen;
+}
+
+.bikes__pagination > .swiper-pagination-bullet {
+  background-color: #f4f4f4;
+  height: 20px;
+  width: auto;
+}
+
+.bike__card {
+  margin: 0;
+  padding: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.bike__caption {
+  margin: 0;
+  padding: 0;
+}
+.bike__image {
+  width: auto;
+  margin: 0;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: content-box;
+  box-shadow: -20px 60px 120px 0 rgba(0, 0, 0, 0.14);
+}
+.bike__slide {
+  visibility: visible;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.bike__link {
+  margin: 0;
+  padding: 0;
 }
 
 .training {
@@ -154,7 +219,6 @@ section {
   grid-area: your-choice;
 }
 .intro__overlay {
-  border: hotpink 1px solid;
   grid-area: image;
   position: absolute;
   top: 0;
@@ -175,6 +239,7 @@ section {
   margin-bottom: 79px;
   margin-top: 300px;
   border-radius: 20px;
+  padding: 20px;
   box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
   align-self: center;
   box-sizing: content-box;
@@ -212,7 +277,7 @@ section {
 }
 
 .title {
-  display: block;
+  display: inline-block;
   font-family: "inter";
   font-style: normal;
   font-weight: 700;
@@ -239,28 +304,40 @@ section {
   opacity: 0.7;
 }
 
-.button-slide {
-  display: inline-block;
-  border: 17px solid #EBEBEB;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background-color: #EBEBEB;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 50px;
-  height: 50px;
-  margin-top: 50px;
-  grid-area: button;
+.highway-slides {
+  width: 100%;
 }
-.button-slide_next {
-  margin-left: 70px;
-  background-image: url("../../../images/button/button-slide-next.svg");
-  -o-object-position: center;
-     object-position: center;
+.highway-slides__swiper-pagination {
+  margin: 0;
+  max-width: 100%;
+  height: 20px;
+  display: block;
 }
-.button-slide_prev {
-  background-image: url("../../../images/button/button-slide-prev.svg");
-  -o-object-position: center;
-     object-position: center;
+.highway-slides__prev {
+  background-color: deepskyblue;
+  height: 20px;
+  width: 20px;
+}
+.highway-slides__next {
+  background-color: #e21515;
+  height: 20px;
+  width: 20px;
+}
+
+.TT-slides {
+  width: 100%;
+}
+.TT-slides__swiper-pagination {
+  margin: 0;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.gravel-slides {
+  width: 100%;
+}
+.gravel-slides__swiper-pagination {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
