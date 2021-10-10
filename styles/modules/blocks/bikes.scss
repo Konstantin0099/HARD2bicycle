@@ -1,14 +1,9 @@
 .bikes {
-  padding-right: 80px;
+  padding: 120px 80px 0 0;
   box-sizing: content-box;
-  // width: 100%;
+  width: 100%;
   // @include mp(0, 0);
   @include display();
-  @include color();
-
-// ЭЛЕМЕНТ ОТКЛЮЧЕН НА ЭКРАНЕ , НА ПЕРИОД ОТЛАДКИ
-// display: none;
-
 
   &__header {
     display: flex;
@@ -17,8 +12,9 @@
   }
 
   &__slides {
+    width: 100%;
       margin: 0 auto;
-    //   overflow: hidden;
+      overflow: hidden;
     // width: (calc(340px - ((1440px - 100vw) * 0.14)));
     // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
 
@@ -51,6 +47,10 @@
     width: 50px;
     height: 30px;
     background-color: yellowgreen;
+  }
+  &__slides-group{
+    width: 100%;
+    border: orchid 1px solid;
   }
 }
 
