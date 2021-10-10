@@ -1,7 +1,65 @@
 .bikes {
+  padding: 120px 80px 0 0;
+  box-sizing: content-box;
+  width: 100%;
+  // @include mp(0, 0);
+  @include display();
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__slides {
     width: 100%;
-    @include mp();
-    @include display();
-    @include color();
-    
+      margin: 0 auto;
+      overflow: hidden;
+    // width: (calc(340px - ((1440px - 100vw) * 0.14)));
+    // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
+
+
+
+    // transform: translate(0vw, 0);
+
+
+  }
+  &__swiper-wraper {
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 0;
+    max-width: 250px;
+    height: 28px;
+  }
+  &__swiper-button-prev {
+    margin-left: 100px;
+    width: 50px;
+    height: 30px;
+    background-color: blue;
+  }
+  &__swiper-button-next {
+    width: 50px;
+    height: 30px;
+    background-color: yellowgreen;
+  }
+  &__slides-group{
+    width: 100%;
+    border: orchid 1px solid;
+  }
 }
+
+.bikes__pagination > .swiper-pagination-bullet {
+  background-color: #f4f4f4;
+  height: 20px;
+  width: auto;
+  // display: block;
+}
+// .bikes__pagination + .swiper-pagination-bullet-active {
+//   border-radius: 10%;
+// }

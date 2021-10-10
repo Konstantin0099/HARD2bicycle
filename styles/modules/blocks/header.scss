@@ -1,7 +1,36 @@
 .header {
-    width: 100%;
-    @include mp();
+    height: 74px;
+    @include mp(0, 0, 0, 0, 28px 120px 28px 0);
     @include display($display: flex);
     @include color();
-    
+    flex-direction: row;
+    justify-content: flex-end;
+    position: sticky;
+    top:0;
+    z-index: 2;
+    box-sizing: border-box;
+
+&__list {
+    list-style-type: none;
+    margin: 0; padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
+&__item-nav {
+    margin-left: 34px;
+}
+    &__nav {
+        text-decoration: none;
+        font-family: inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 106%;
+        color: #151515;
+    }
+
+
+
+}
+

@@ -1,0 +1,39 @@
+.bike {
+
+    
+
+  &__card {
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    // box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.44);
+  }
+  &__caption {
+    margin: 0;
+    padding: 0;
+  }
+  &__image {
+      width: auto;
+    //   width: (calc(340px - ((1440px - 100vw) * 0.14)));
+    margin: 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: content-box;
+    box-shadow: -20px 60px 120px 0 rgba(0, 0, 0, 0.14);
+  
+  }
+  &__slide{
+    // background-color: $backgroundColor;
+    visibility: visible;
+    // z-index: 0;
+    // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+&__link {
+    margin: 0;
+    padding: 0;
+}
+
+}
