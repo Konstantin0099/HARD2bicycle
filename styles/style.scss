@@ -1,4 +1,4 @@
-footer {border: 0.5px rgb(76, 207, 59) dashed; height: 300px};
+
 @import "./modules/variables.scss";
 @import "./modules/mixins.scss";
 @import "./modules/blocks/page.scss";
@@ -13,5 +13,6 @@ footer {border: 0.5px rgb(76, 207, 59) dashed; height: 300px};
 @import "./modules/blocks/highway-slides.scss";
 @import "./modules/blocks/TT-slides.scss";
 @import "./modules/blocks/gravel-slides.scss";
+// @import "./modules/blocks/button-slide.scss";
 
 

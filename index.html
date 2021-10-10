@@ -24,6 +24,7 @@
         </li>
       </ul>
     </header>
+
     <section class="intro">
       <h2 class="intro__title title">Шоссе, ТТ и Грэвел</h2>
       <p class="intro__description description">
@@ -31,14 +32,14 @@
         маршрутам – нужно только определиться с выбором велосипеда и отправиться
         в путь.
       </p>
-      <a href="" class="intro__more-detailed-button">Подробнее</a>
-      <p class="intro__bike-name">Cannondale Systemsix</p>
+      <a href="#" class="intro__more-detailed-button">Подробнее</a>
+      <p class="intro__bike-name">Cannondale&nbsp;Systemsix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="intro__line">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+      </p>
       <img
         class="intro__image"
         src="./images/mountainForestRoad.png"
         alt="mountainForestRoad"
       />
-
       <div class="intro__overlay">
         <img class="intro__bike-fix" src="./images/cannondale.png" alt="bike" />
       </div>
@@ -68,69 +69,42 @@
     </section>
 
     <section class="surfaceAndGradients">
-      <div class="surfaceAndGradients__slides_title">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <h2 class="surfaceAndGradients__slide-title title">Шоссе</h2>
-          </div>
-          <div class="swiper-slide">
-            <h2 class="surfaceAndGradients__slide-title title">Грэвел</h2>
-          </div>
-          <div class="swiper-slide">
-            <h2 class="surfaceAndGradients__slide-title title">TT</h2>
-          </div>
-        </div>
-      </div>
 
-      <div class="surfaceAndGradients__slides_text description">
-        <!-- Additional required wrapper -->
+      <div class="surfaceAndGradients__slides">
         <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
+          <div class="swiper-slide surfaceAndGradients__slide">
+            <h2 class="surfaceAndGradients__slide-title title">Шоссе</h2>
             <p class="surfaceAndGradients__slide-text">
               На шоссейном велосипеде можно ездить по асфальту на разных
               градиентах: будь то горы или равнины. Гонки проходят в командном
               пелотоне, но тренироваться можно и самостоятельно.
             </p>
-          </div>
-          <div class="swiper-slide">
-            <p class="surfaceAndGradients__slide-text">
-              Грэвел похож на шоссейный велосипед, но конструкция рамы немного
-              отличается, и на нём стоят более широкие покрышки, всё для того
-              чтобы проехать по лёгкому бездорожью.
-            </p>
-          </div>
-          <div class="swiper-slide">
-            <p class="surfaceAndGradients__slide-text">
-              ТТ — это велосипед для триатлона или раздельного старта, гооняют
-              на таком велике только по равнинному асфальту, велик очень быстрые
-              и аэродинамичный.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="surfaceAndGradients__slides">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
             <img
               class="surfaceAndGradients__image"
               src="./images/serpentineRoad.png"
               alt="bike"
             />
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide surfaceAndGradients__slide">
+            <h2 class="surfaceAndGradients__slide-title title">Грэвел</h2>
+            <p class="surfaceAndGradients__slide-text">
+              Грэвел похож на шоссейный велосипед, но конструкция рамы немного
+              отличается, и на нём стоят более широкие покрышки, всё для того
+              чтобы проехать по лёгкому бездорожью.
+            </p>
             <img
               class="surfaceAndGradients__image"
               src="./images/forestRoad.png"
               alt="bike"
             />
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide surfaceAndGradients__slide">
+            <h2 class="surfaceAndGradients__slide-title title">TT</h2>
+            <p class="surfaceAndGradients__slide-text">
+              ТТ — это велосипед для триатлона или раздельного старта, гооняют
+              на таком велике только по равнинному асфальту, велик очень быстрые
+              и аэродинамичный.
+            </p>
             <img
               class="surfaceAndGradients__image"
               src="./images/highway.png"
@@ -138,18 +112,12 @@
             />
           </div>
         </div>
-        <!-- If we need pagination -->
-        <!-- <div class="swiper-pagination">swiper-pagination</div> -->
-
-        <!-- If we need navigation buttons -->
-        <!-- <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div> -->
-
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar">swiper-scrollbar</div> -->
       </div>
-      <div class="button-slide button-slide_prev"></div>
-      <div class="button-slide button-slide_next"></div>
+      <div class="surfaceAndGradients__container-button-slide">
+        <div class="surfaceAndGradients__button-slide surfaceAndGradients__button-slide_next"></div>
+        <div class="surfaceAndGradients__button-slide surfaceAndGradients__button-slide_prev"></div>
+      </div>
+     
     </section>
 
     <section class="bikes">
@@ -158,66 +126,10 @@
         <div class="bikes__pagination"></div>
       </div>
       <div class="bikes__slides">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="highway-slides">
-              <div class="swiper-wrapper">
-                <!-- от сюда  -->
-                <!-- <div class="swiper-slide bike__slide">
-  <a
-    href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J
-    "
-    class="bike__link"
-  >
-    <figure class="bike__card">
-      <img
-        class="bike__image"
-        src="./images/cannondaleSystemsixHimod.png"
-        alt="велосипед Cannondale Systemsix Himod"
-      />
-      <figcaption class="bike__caption">
-        Cannondole Systemsix Himod
-      </figcaption>
-    </figure>
-  </a>
-</div>
-<div class="swiper-slide bike__slide">
-  <a
-    href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-    class="header__lang-link"
-  >
-    <figure class="bike__card">
-      <img
-        class="bike__image"
-        src="./images/carveloCaledonia-5.png"
-        alt="велосипед Carvelo Caledonia-5"
-      />
-      <figcaption class="bike__caption">
-        Carvelo Caledonia-5
-      </figcaption>
-    </figure>
-  </a>
-</div>
-
-<div class="swiper-slide bike__slide">
-  <a
-    href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF
-    "
-    class="header__lang-link"
-  >
-    <figure class="bike__card">
-      <img
-        class="bike__image"
-        src="./images/trekDomaneSL-7.png"
-        alt="велосипед Trek DomaneSL-7"
-      />
-      <figcaption class="bike__caption">
-        Trek DomaneSL-7
-      </figcaption>
-    </figure>
-  </a>
-</div> -->
-                <!-- до сюда -->
+        <div class="swiper-wrapper bikes__slides-group">
+          <div class="swiper-slide bikes__slides-group">
+            <div class="highway-slides"> 
+              <div class="swiper-wrapper bike">
                 <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J
@@ -273,18 +185,19 @@
                   </a>
                 </div>
               </div>
-              <div class="highway-slides__next"></div>
+              <!-- <div class="highway-slides__next"></div> -->
               <div
                 class="swiper-paginatio highway-slides__swiper-pagination"
-              ></div>
-              <div class="highway-slides__prev"></div>
+              >
+            </div>
+              <!-- <div class="highway-slides__prev"></div> -->
             </div>
             <!-- <div class="highway-slides__swiper-pagination"></div> -->
           </div>
 
           <div class="swiper-slide">
             <div class="gravel-slides">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper bike">
                 <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE
@@ -346,7 +259,7 @@
           </div>
           <div class="swiper-slide">
             <div class="TT-slides">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper bike">
                 <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9
@@ -402,7 +315,9 @@
                   </a>
                 </div>
               </div>
-              <div class="TT-slides__swiper-pagination"></div>
+              <div class="TT-slides__swiper-pagination">
+                
+              </div>
             </div>
           </div>
         </div>
@@ -460,7 +375,11 @@
       <div class="footer__button-theme-switch">
         <div class="footer__sun"></div>
         <div class="footer__button-container">
-          <img class="footer__button" src="./images/button/button-theme-switch.svg" alt="круглая кнопка">
+          <img
+            class="footer__button"
+            src="./images/button/button-theme-switch.svg"
+            alt="круглая кнопка"
+          />
         </div>
         <div class="footer__moon"></div>
       </div>

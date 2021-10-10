@@ -1,29 +1,83 @@
 .intro {
   position: relative;
   display: grid;
-  grid-template-columns: 43% 57%;
+  justify-content: flex-end;
+  grid-template-columns: 43% 47%;
   grid-template-rows: 20% 20% 10% 50%;
   grid-row-gap: 0;
-  grid-column-gap: 0;
+  grid-column-gap: 10%;
   grid-template-areas:
     "title image"
     "your-choice image"
     "more-detailed-button image"
     "bike-name image";
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0 0;
   max-width: 1440px;
-  // элемент выключен                элемент выключен
-  // display: none;
 
   &__title {
+    max-width: 460px;
+    margin: 50px 0 0 0;
     grid-area: title;
+    display: inline-block;
+    @include font(
+      $family: "inter",
+      $fontStyle: normal,
+      $fontWeight: 700,
+      $fontSize: (
+        calc(55px - ((1440px - 100vw) * 0.041)),
+      ),
+      $lineHeight: 90%,
+      $letterSpacing: -0.5px
+    );
+    @media screen and (min-width: 1440px) {
+      & {
+        font-size: 55px;
+      }
+    }
+    @media screen and (max-width: 1030px) {
+      & {
+        margin-top: 40px;
+      }
+    }
+    @media screen and (max-width: 850px) {
+      & {
+        margin-top: 30px;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      & {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__description {
+    @include font(
+      $family: "inter",
+      $fontStyle: normal,
+      $fontWeight: 400,
+      $fontSize: (
+        calc(18px - ((1440px - 100vw) * 0.009)),
+      ),
+      $lineHeight: 128%,
+      $collorText: #111111,
+      $opacity: 0.7
+    );
+    max-width: 460px;
+    margin-top: 50px 0 0 0;
     grid-area: your-choice;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-
+  &__line {
+    color: #d7d4d4;
+    @media screen and (max-width: 1000px) {
+      & {
+        max-width: 5%;
+      }
+    }
+  }
   &__overlay {
     grid-area: image;
     position: absolute;
@@ -37,34 +91,53 @@
   }
 
   &__bike-fix {
-    width: (calc(340px - ((1440px - 100vw) * 0.14)));
-    // justify-content: start;
-    // opacity: 1;
+    width: (calc(340px - ((1440px - 100vw) * 0.2)));
     background-color: $backgroundColor;
     visibility: visible;
     z-index: 1;
     top: 300px;
     position: sticky;
-    // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
     margin-bottom: 79px;
-    margin-top: 300px;
+    margin-top: 200px;
     border-radius: 20px;
     padding: 20px;
     box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
     align-self: center;
-    // transform: translate(0vw, 0);
     box-sizing: content-box;
     max-width: 340px;
+    transform: translateX(-150px);
+    @media screen and (max-width: 1030px) {
+      & {
+        transform: translateX(-110px);
+
+        top: 200px;
+        margin-bottom: 59px;
+        margin-top: 150px;
+      }
+    }
+    @media screen and (max-width: 850px) {
+      & {
+        transform: translateX(-70px);
+        top: 150px;
+        margin-bottom: 39px;
+        margin-top: 100px;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      & {
+        transform: translateX(-20px);
+        top: 100px;
+        margin-bottom: 19px;
+        margin-top: 50px;
+      }
+    }
   }
-  // @media screen and (min-width: 1440px) {
-  //   &__bike-fix {
-  //     width: 340px;
-  //   }
-  // }
 
   &__image {
-    width: (calc(610px - ((1440px - 100vw) * 0.32)));
+    width: 100%;
+    // width: (calc(610px - ((1440px - 100vw) * 0.32)));
     justify-self: end;
+    align-self: end;
     grid-area: image;
     max-width: 610px;
   }
@@ -75,8 +148,18 @@
   // }
 
   &__more-detailed-button {
+    margin-top: 50px;
     grid-area: more-detailed-button;
-    display: block;
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    text-decoration: none;
+    background-color: #24b47e;
+    cursor: pointer;
+    border-radius: 4px;
+
     @include font(
       $family: "inter",
       $fontStyle: normal,
@@ -86,8 +169,16 @@
       $letterSpacing: 1px,
       $collorText: #ffffff
     );
+    @media screen and (max-width: 1000px) {
+      & {
+        font-size: 13px;
+        line-height: 19px;
+      }
+    }
   }
   &__bike-name {
+    // max-width: 300px;
+    margin: 167px 0 auto 0;
     grid-area: bike-name;
     display: block;
     @include font(
@@ -97,6 +188,14 @@
       $fontSize: 18px,
       $lineHeight: 18px
     );
+    @media screen and (max-width: 1000px) {
+      & {
+        font-size: 16px;
+        line-height: 16px;
+        overflow: hidden;
+        margin: auto 0;
+      }
+    }
   }
 }
 
@@ -107,31 +206,14 @@
     $fontStyle: normal,
     $fontWeight: 700,
     $fontSize: (
-      calc(55px - ((1440px - 100vw) * 0.021)),
+      calc(55px - ((1440px - 100vw) * 0.031)),
     ),
-    // $fontSize: 3.82vw,
     $lineHeight: 90%,
     $letterSpacing: -0.5px
   );
-}
-@media screen and (min-width: 1440px) {
-  .title {
-    font-size: 55px;
+  @media screen and (min-width: 1440px) {
+    & {
+      font-size: 55px;
+    }
   }
-}
-
-.description {
-  // display: block;
-  @include font(
-    $family: "inter",
-    $fontStyle: normal,
-    $fontWeight: 400,
-    $fontSize: 18px,
-    // $fontSize: (
-    //   calc(18px - ((1440px - 100vw) * 0.0054)),
-    // ),
-    $lineHeight: 28px,
-    $collorText: #222222,
-    $opacity: 0.7
-  );
 }
