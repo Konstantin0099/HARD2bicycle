@@ -1,39 +1,44 @@
 .bike {
-
-    
+  width: 100%;
 
   &__card {
+    display: block;
     margin: 0;
     padding: 0;
-    object-fit: contain;
-    // box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.44);
+    object-fit: cover;
   }
   &__caption {
     margin: 0;
     padding: 0;
+    text-align: center;
+    // object-position: center;
+    // object-fit: contain;
+
+    @media screen and (max-width: 600px) {
+      & {
+         font-size: 14px;
+      }
+    }
   }
   &__image {
-      width: auto;
-    //   width: (calc(340px - ((1440px - 100vw) * 0.14)));
+    background-color: #f4f4f4;
+    width: 88%;
     margin: 0;
     padding: 20px;
     border-radius: 20px;
     box-sizing: content-box;
-    box-shadow: -20px 60px 120px 0 rgba(0, 0, 0, 0.14);
-  
   }
-  &__slide{
-    // background-color: $backgroundColor;
+  &__slide {
+    width: auto;
+    cursor: pointer;
     visibility: visible;
-    // z-index: 0;
-    // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
+    overflow: hidden;
     margin-bottom: 0px;
     margin-top: 0px;
   }
 
-&__link {
+  &__link {
     margin: 0;
     padding: 0;
-}
-
+  }
 }
