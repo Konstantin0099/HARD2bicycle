@@ -3,7 +3,7 @@
   display: grid;
   justify-content: flex-end;
   grid-template-columns: 43% 47%;
-  grid-template-rows: 20% 20% 10% 50%;
+  grid-template-rows: 20% 30% 10% 40%;
   grid-row-gap: 0;
   grid-column-gap: 10%;
   grid-template-areas:
@@ -14,45 +14,49 @@
   margin: 0;
   padding: 20px 0 0 0;
   max-width: 1440px;
-
+  @media screen and (max-width: 600px) {
+    & {
+      grid-column-gap: 0;
+      grid-template-columns: 100%;
+       grid-template-rows: 20% 50% 20% 10%;
+      grid-template-areas:
+        "title"
+        "image"
+        "your-choice"
+        "more-detailed-button";
+    }
+  }
   &__title {
+    height: 100%;
     max-width: 460px;
     margin: 50px 0 0 0;
     grid-area: title;
     display: inline-block;
-    @include font(
-      $family: "inter",
-      $fontStyle: normal,
-      $fontWeight: 700,
-      $fontSize: (
-        calc(55px - ((1440px - 100vw) * 0.041)),
-      ),
-      $lineHeight: 90%,
-      $letterSpacing: -0.5px
-    );
-    @media screen and (min-width: 1440px) {
+    @media screen and (max-width: 1230px) {
       & {
-        font-size: 55px;
+        max-width: 360px;
       }
     }
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 930px) {
       & {
-        margin-top: 40px;
+        margin-top: 20px;
       }
     }
-    @media screen and (max-width: 850px) {
-      & {
-        margin-top: 30px;
-      }
-    }
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 700px) {
       & {
         margin-top: 10px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        max-width: 300px;
       }
     }
   }
 
   &__description {
+    // display: flex;
+    // height: 100%;
     @include font(
       $family: "inter",
       $fontStyle: normal,
@@ -64,11 +68,22 @@
       $collorText: #111111,
       $opacity: 0.7
     );
-    max-width: 460px;
-    margin-top: 50px 0 0 0;
+    max-width: 400px;
+    align-self: center;
+    margin: 0px 0 0 0;
     grid-area: your-choice;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media screen and (max-width: 1100px) {
+      & {
+        max-width: 350px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      & {
+        max-width: 300px;
+      }
+    }
   }
   &__line {
     color: #d7d4d4;
@@ -100,7 +115,7 @@
     margin-bottom: 79px;
     margin-top: 200px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 50px;
     box-shadow: -20px 60px 220px 20px rgba(0, 0, 0, 0.44);
     align-self: center;
     box-sizing: content-box;
@@ -108,7 +123,7 @@
     transform: translateX(-150px);
     @media screen and (max-width: 1030px) {
       & {
-        transform: translateX(-110px);
+        transform: translateX(-100px);
 
         top: 200px;
         margin-bottom: 59px;
@@ -117,7 +132,8 @@
     }
     @media screen and (max-width: 850px) {
       & {
-        transform: translateX(-70px);
+        padding: 10px 26px;
+        transform: translateX(-50px);
         top: 150px;
         margin-bottom: 39px;
         margin-top: 100px;
@@ -131,15 +147,32 @@
         margin-top: 50px;
       }
     }
+    @media screen and (max-width: 600px) {
+      & {
+    
+        min-width: 147px;
+        transform: translateX(-10px);
+        top: 100px;
+        margin-left: 10px;
+        margin-bottom: 19px;
+        margin-top: 50px;
+      }
+    }
   }
 
   &__image {
+    height: 100%;
     width: 100%;
     // width: (calc(610px - ((1440px - 100vw) * 0.32)));
     justify-self: end;
     align-self: end;
     grid-area: image;
     max-width: 610px;
+    @media screen and (max-width: 600px) {
+      & {
+       width: 90%;
+      }
+    }
   }
   // @media screen and (min-width: 1440px) {
   //   &__image {
@@ -148,7 +181,7 @@
   // }
 
   &__more-detailed-button {
-    margin-top: 50px;
+    // margin-top: 50px;
     grid-area: more-detailed-button;
     display: flex;
     justify-content: center; /*Центрирование по горизонтали*/
@@ -173,6 +206,11 @@
       & {
         font-size: 13px;
         line-height: 19px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      & {
+       width: 100%;
       }
     }
   }
@@ -200,7 +238,6 @@
 }
 
 .title {
-  display: inline-block;
   @include font(
     $family: "inter",
     $fontStyle: normal,
@@ -208,12 +245,18 @@
     $fontSize: (
       calc(55px - ((1440px - 100vw) * 0.031)),
     ),
-    $lineHeight: 90%,
+    $lineHeight: 109%,
     $letterSpacing: -0.5px
   );
   @media screen and (min-width: 1440px) {
     & {
       font-size: 55px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    & {
+      font-size: calc(32px - ((320px - 100vw) * 0.041));
+      line-height: 125%;
     }
   }
 }
