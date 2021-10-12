@@ -1,0 +1,32 @@
+.content{
+        position: relative;
+        width: 100%;
+        // @include mp();
+        @include display ($display: block);
+        @include color();
+       margin: 0;
+       padding-left: 120px;
+       box-sizing: border-box;
+    
+    @media screen and (max-width: 1240px) {
+        & {
+            padding-left: 90px;
+        }
+      }
+    @media screen and (max-width: 1040px) {
+        & {
+            padding-left: 60px;
+        }
+      }
+    @media screen and (max-width: 840px) {
+        & {
+            padding-left: 30px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        & {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+      }
+    }
