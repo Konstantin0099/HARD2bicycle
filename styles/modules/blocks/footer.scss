@@ -9,6 +9,30 @@
   // @include mp();
   //   @include display($display: block);
   //   @include color();
+  @media screen and (max-width: 1240px) {
+    & {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+  }
+@media screen and (max-width: 1040px) {
+    & {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+  }
+@media screen and (max-width: 840px) {
+    & {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    & {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+  }
   &__text {
     // width: auto;
     // display: flex;
@@ -37,6 +61,8 @@
     line-height: 110%;
   }
   &__your-email {
+    // flex-shrink: 0;
+    width: 86%;
     outline: none;
     padding: 11px 0 11px 20px;
     background-color: inherit;
@@ -50,6 +76,7 @@
     opacity: 70%;
   }
   &__input-container-button {
+    margin: 11px 22px;
     background-color: inherit;
     border: none;
     font-family: inter;
@@ -67,13 +94,13 @@
     justify-content: space-between;
     border: rgba(199, 199, 199, 0.5) solid 1px;
     border-radius: 4px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 750px) {
       & {
-        width: 260px;
+        width: 360px;
       }
     }
   }
-  &_logo{
+  &_logo {
     margin: 0;
     padding: 0;
     width: 100%;
