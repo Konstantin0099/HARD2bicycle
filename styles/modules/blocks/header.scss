@@ -1,14 +1,13 @@
 .header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
   width: 100%;
   min-height: 74px;
-  @include mp(0, 0, 0, 0, 28px 120px 28px 0);
-  @include display($display: flex);
-  @include color();
-  flex-direction: row;
-  justify-content: flex-end;
+  background-color: inherit;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   box-sizing: border-box;
    @media screen and (max-width: 1100px) {
     & {
@@ -26,24 +25,24 @@
     }
   }
   &__list {
-    list-style-type: none;
-    margin: 38px auto;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    list-style-type: none;
+    margin: 38px auto;
+    padding: 0;
     @media screen and (max-width: 600px) {
       & {
-        color: deeppink;
         margin-top: calc(38px - ((320px - 100vw) * 0.1));
       }
     }
   }
-  }
+  
   &__list_desktop {
-    margin: 0;
     flex-direction: row;
-    justify-content: flex-end;
+    align-items: center;
+    // justify-content: flex-end;
+    margin: 0;
     @media screen and (max-width: 600px) {
       & {
         display: none;
@@ -52,10 +51,9 @@
   }
 
   &__mobile {
-    padding-bottom: 40px;
     display: none;
+    padding-bottom: 40px;
     width: 100%;
-    // height: 100%;
     @media screen and (max-width: 600px) {
       & {
         display: flex;
@@ -72,14 +70,13 @@
     }
   }
   &__nav {
+    @include font(
+      $fontWeight: 500,
+      $fontSize: 14px,
+      $lineHeight: 129%,
+    );
     text-decoration: none;
-    font-family: inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 129%;
-    color: #151515;
-
+    color: inherit;
     @media screen and (max-width: 600px) {
       & {
         font-size: calc(18px - ((320px - 100vw) * 0.041));
@@ -87,7 +84,6 @@
       }
     }
   }
-
   &__button {
     cursor: pointer;
     border: none;
@@ -95,17 +91,19 @@
     background-size: cover;
     object-position: center;
     background-image: url(../../../images/mobile/E.svg);
+    background-color: transparent;
     display: none;
     width: 22px;
     height: 22px;
+    &_darkTheme{
+      background-image: url(../../../images/mobile/E-dark.svg);
+    }
     @media screen and (max-width: 600px) {
       & {
         display: block;
         margin: 30px 20px 30px auto;
       }
     }
-  }
-  &__button_opened {
   }
   &__button_closed {
     display: none;
@@ -124,8 +122,8 @@
     }
   }
   &__button_menu {
+    background-color: #F4F4F4;
     background-image: url(../../../images/mobile/X.svg);
   }
 }
 
-// class="header__button header__button_opened header__button_closed"
