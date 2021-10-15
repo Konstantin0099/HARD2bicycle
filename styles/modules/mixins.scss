@@ -1,44 +1,19 @@
-@mixin mp($mt: 0, $mr: 0, $mb: 0, $ml: 0, $padding...)
- {
-  margin: $mt $mr $mb $ml;
-  padding: $padding;
-}
-// @mixin mp(
-//   $marginTop: 0,
-//   $marginLeft: $marginTop,
-//   $paddingTop: 0,
-//   $paddingLeft: $paddingTop
-// ) {
-//   margin: $marginTop $marginLeft;
-//   padding: $paddingTop $paddingLeft;
-// }
-@mixin display($display: block, $maxwidth: $desktopMaxWidh) {
-  max-width: $maxwidth;
-  display: $display;
-  // border: 0;
-}
 
-@mixin color($textColor: #151515, $backgroundColor: #f4f4f4) {
-  color: $textColor;
-  background-color: $backgroundColor;
-}
 
 @mixin font(
   $family: "inter",
   $fontStyle: normal,
   $fontWeight: 400,
-  $fontSize: 22px,
-  $lineHeight: 26px,
+  $fontSize: 8px,
+  $lineHeight: 110%,
   $letterSpacing: normal,
-  $collorText: #151515,
   $opacity: 1
 ) {
-  font-family: $family;
+  font-family: $family, "Arial", sans-serif;
   font-style: $fontStyle;
   font-weight: $fontWeight;
   font-size: $fontSize;
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
-  color: $collorText;
   opacity: $opacity;
 }

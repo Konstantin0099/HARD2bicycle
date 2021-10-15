@@ -1,17 +1,19 @@
 .bikes {
-  background-color: #f4f4f4;
+  background-color: inherit;
   padding: 120px 120px 0 0;
   box-sizing: content-box;
   // width: 100%;
-  @include display();
+  display: block;
 
   &__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     @media screen and (max-width: 600px) {
       & {
         flex-direction: column;
+        align-items: flex-start;
       }
     }
   }
@@ -25,26 +27,74 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: auto 0;
     max-width: 250px;
-    height: 28px;
-    &:hover .swiper-pagination-bullet {
-      visibility: visible;
-      transition: 200ms;
+    height: 100%;
+    visibility: visible;
+    &-mobile {
+
+      @media screen and (max-width: 600px) {
+        & {
+          display: flex;
+          justify-content: space-between;
+          visibility: visible;
+          flex-direction: column;
+          height: 100px;
+          margin: 0;
+          max-width: 250px;
+        }
+      }
     }
     & > .swiper-pagination-bullet {
-      background-color: #f4f4f4;
+      // background-color: #f4f4f4;
       height: 20px;
       width: auto;
     }
-    @media screen and (max-width: 600px) {
-      & {
-        flex-direction: column;
-        height: auto;
+    & > .swiper-pagination-bullet {
+      // background-color: #f4f4f4;
+      height: 20px;
+      width: auto;
+    }
+    &-container {
+      display: flex;
+      box-sizing: content-box;
+overflow: hidden;
+      height: 20px;
+      width: 300px;
+        @media screen and (max-width: 600px) {
+        & {
+          margin-bottom: 80px;
+          padding: 8px 12px 8px 12px;
+          // margin: 8px 12px 8px 12px;
+          border: solid 1px black;
+          border-radius: 4px;
+          width: 114px;
+        }
       }
+      &_opened {
+        height: 20px;
+        visibility: visible;
+        @media screen and (max-width: 600px) {
+          & {
+            height: 100px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    
+    }
+    &-arrow {
+      display: none;
+      @media screen and (max-width: 600px) {
+        & {
+          display: block;
+        }
+      }
+    }
+
       & > .swiper-pagination-bullet {
         order: 1;
-        visibility: hidden;
       }
       & > .swiper-pagination-bullet-active {
         @media screen and (max-width: 600px) {
@@ -54,9 +104,8 @@
           }
         }
       }
-    }
+    
   }
-
   &__slides-group {
     width: 100%;
   }

@@ -1,68 +1,86 @@
 const header = document.querySelector(".header");
+const page = document.querySelector(".page");
 const buttonHeaderMenuOpened = header.querySelector(".header__button");
 const headerMenu = header.querySelector(".header__menu");
 const buttonHeaderMenuClosed = headerMenu.querySelector(".header__button");
-installEventListenerMenuOpeningButton(buttonHeaderMenuOpened)
-installEventListenerMenuClosedButton(buttonHeaderMenuClosed)
+const bikesBlock = document.querySelector(".bikes");
+const bikesPaginationContainer = bikesBlock.querySelector(
+  ".bikes__pagination-container"
+);
+const footer = document.querySelector(".footer");
+const themeSwitchFooter = footer.querySelector(".theme-switch__button-container");
+const themeSwitchHeader = header.querySelector(".theme-switch__button-container");
+const footerInputContainer = footer.querySelector(".footer__input-container");
+const footerYourEmail = footerInputContainer.querySelector(".footer__your-email");
+const footerInputContainerButton = footerInputContainer.querySelector(".footer__input-container-button");
 
-console.log("начало");
+installEventListenerPaginationOpeningButton(bikesPaginationContainer);
+installEventListenerMenuOpeningButton(buttonHeaderMenuOpened);
+installEventListenerMenuClosedButton(buttonHeaderMenuClosed);
+
+
+themeSwitchFooter.addEventListener("click", function (evt) {
+  themeSwitchFooter.classList.toggle("theme-switch__button-container_moon-position");
+  themeSwitchHeader.classList.toggle("theme-switch__button-container_moon-position");
+  page.classList.toggle("page_dark-theme");
+  buttonHeaderMenuOpened.classList.toggle("header__button_darkTheme");
+});
+themeSwitchHeader.addEventListener("click", function (evt) {
+  themeSwitchHeader.classList.toggle("theme-switch__button-container_moon-position");
+  themeSwitchFooter.classList.toggle("theme-switch__button-container_moon-position");
+  page.classList.toggle("page_dark-theme");
+  buttonHeaderMenuOpened.classList.toggle("header__button_darkTheme");
+});
+
+
+footerInputContainer.addEventListener("click", function (evt) {
+  footerYourEmail.placeholder = ""
+footerInputContainerButton.classList.add("footer__input-container-button_show");
+});
+
+footerInputContainer.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  evt.target.reset(); // очистка формы
+  footerInputContainerButton.classList.remove("footer__input-container-button_show");
+  footerYourEmail.placeholder = "Круто!"
+});
+
+function installEventListenerPaginationOpeningButton(button) {
+ button.addEventListener("click", function (evt) {
+    openedMenuPagination(button);
+  });
+}
 
 function installEventListenerMenuOpeningButton(button) {
   console.log("installEventListenerMenuOpeningButton()");
-button
-    .addEventListener("click", function (evt) {
-      openedMenu();
-    });
+  button.addEventListener("click", function (evt) {
+    openedMenu();
+  });
 }
 function installEventListenerMenuClosedButton(button) {
   console.log("installEventListenerMenuClosedButton()");
-button
-    .addEventListener("click", function (evt) {
-      closedMenu();
-    });
+  button.addEventListener("click", function (evt) {
+    closedMenu();
+  });
+}
+
+function openedMenuPagination(button) {
+  console.log("button", button);
+  button.classList.toggle(
+    "bikes__pagination-container_opened"
+  );
 }
 
 function openedMenu() {
   console.log("openedMenu()");
   headerMenu.classList.remove("header__menu_closed");
-  buttonHeaderMenuOpened.classList.add('header__button_closed');
-  ;
+  buttonHeaderMenuOpened.classList.add("header__button_closed");
 }
 function closedMenu() {
   console.log("closedMenu()");
   headerMenu.classList.add("header__menu_closed");
-  buttonHeaderMenuOpened.classList.remove('header__button_closed');
-  ;
+  buttonHeaderMenuOpened.classList.remove("header__button_closed");
 }
-
-// function openPopup(popup) {
-//   popup.classList.add("popup_opened");
-//   popup.parentElement.classList.add("popup_opened");
-// }
-// function closePopup(closePopup) {
-//   closePopup.parentElement.classList.add("popup_closed");
-//   closePopup.parentElement.classList.remove("popup_opened");
-//   closePopup.classList.remove("popup_opened");
-// }
-// function setPopupCloseButtonEventListener(popup) {
-//   popup
-//     .querySelector(".popup__click")
-//     .addEventListener("click", function (evt) {
-//       closePopup(popup);
-//     });
-// }
-
-
-
-
-
-
-
-
-
-
-
-
 
 const slides = new Swiper(".surfaceAndGradients__slides", {
   navigation: {
@@ -139,5 +157,6 @@ const slidesTT = new Swiper(".TT-slides", {
     600: { slidesPerView: 3 },
   },
 });
+
 
 console.log("end");
