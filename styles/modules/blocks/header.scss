@@ -9,7 +9,8 @@
   top: 0;
   z-index: 10;
   box-sizing: border-box;
-   @media screen and (max-width: 1100px) {
+  padding-right: 120px;
+  @media screen and (max-width: 1100px) {
     & {
       padding-right: 90px;
     }
@@ -31,17 +32,11 @@
     list-style-type: none;
     margin: 38px auto;
     padding: 0;
-    @media screen and (max-width: 600px) {
-      & {
-        margin-top: calc(38px - ((320px - 100vw) * 0.1));
-      }
-    }
   }
-  
+
   &__list_desktop {
     flex-direction: row;
     align-items: center;
-    // justify-content: flex-end;
     margin: 0;
     @media screen and (max-width: 600px) {
       & {
@@ -52,7 +47,7 @@
 
   &__mobile {
     display: none;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     width: 100%;
     @media screen and (max-width: 600px) {
       & {
@@ -68,13 +63,12 @@
         margin: 32px auto 0;
       }
     }
+    &:hover {
+      opacity: 0.75;
+    }
   }
   &__nav {
-    @include font(
-      $fontWeight: 500,
-      $fontSize: 14px,
-      $lineHeight: 129%,
-    );
+    @include font($fontWeight: 500, $fontSize: 14px, $lineHeight: 129%);
     text-decoration: none;
     color: inherit;
     @media screen and (max-width: 600px) {
@@ -95,7 +89,7 @@
     display: none;
     width: 22px;
     height: 22px;
-    &_darkTheme{
+    &_darkTheme {
       background-image: url(../../../images/mobile/E-dark.svg);
     }
     @media screen and (max-width: 600px) {
@@ -117,13 +111,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 40px;
     &_closed {
       display: none;
     }
   }
   &__button_menu {
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
     background-image: url(../../../images/mobile/X.svg);
   }
 }
-

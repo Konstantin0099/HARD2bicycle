@@ -1,13 +1,10 @@
 .content {
   position: relative;
   width: 100%;
-display: block;
-// background-color: $backgroundColor;
-// color: $colorTitle;
+  display: block;
   margin: 0;
   padding-left: 120px;
   box-sizing: border-box;
-
   @media screen and (max-width: 1240px) {
     & {
       padding-left: 90px;

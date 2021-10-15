@@ -1,7 +1,5 @@
 .training {
-  // @include mp();
-  //   @include display();
-  // @include color();
+  color: inherit;
   padding: 120px 120px 120px 0;
   box-sizing: content-box;
   display: flex;
@@ -31,6 +29,7 @@
   }
 
   &__text {
+    color: inherit;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -45,29 +44,35 @@
     }
   }
   &__title {
+    color: inherit;
     margin: 0;
     margin-bottom: 50px;
     display: block;
-    &_mobile { display: none;}
+    &_mobile {
+      display: none;
+    }
     @media screen and (max-width: 600px) {
       & {
-display: none;
-&_mobile {display: block; order: -2};
+        display: none;
+        &_mobile {
+          display: block;
+          order: -2;
+        }
       }
     }
-
   }
   &__paragraph {
     margin: 0;
     display: block;
-   
   }
   &__strava {
+    color: inherit;
     text-decoration: none;
     margin: 0;
     display: block;
   }
   &__komoot {
+    color: inherit;
     text-decoration: none;
     margin: 0;
     display: block;
@@ -90,22 +95,34 @@ display: none;
     display: flex;
     width: 100%;
   }
-  &__links{ 
-      padding: 0;
-      width: 120px;
-      margin: 0;
-      margin-top: auto;
+  &__links {
+    color: inherit;
+    padding: 0;
+    max-width: 140px;
+    margin: 0;
+    margin-top: auto;
     display: flex;
     justify-content: space-between;
+
     @media screen and (max-width: 600px) {
       & {
-        // width: 100%;
         margin: 40px 0 50px 0;
       }
     }
-
   }
-&__link{
-display: block;
-}
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    @include font(
+      $fontWeight: 600,
+      $fontSize: 18px,
+      $lineHeight: 128%,
+      $letterSpacing: normal,
+      $opacity: 1
+    );
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 }

@@ -1,83 +1,114 @@
 const header = document.querySelector(".header");
 const page = document.querySelector(".page");
+const intro = document.querySelector(".intro");
+const surfaceAndGradients = document.querySelector(".surfaceAndGradients");
+const bikes = document.querySelector(".bikes");
+const training = document.querySelector(".training");
+const footer = document.querySelector(".footer");
+
 const buttonHeaderMenuOpened = header.querySelector(".header__button");
 const headerMenu = header.querySelector(".header__menu");
 const buttonHeaderMenuClosed = headerMenu.querySelector(".header__button");
+
+const descriptionTextIntro = intro.querySelector(".description-text");
+const descriptionTextHighway = surfaceAndGradients.querySelector(
+  ".description-text_highway"
+);
+const descriptionTextGrevel = surfaceAndGradients.querySelector(
+  ".description-text_grevel"
+);
+const descriptionTextTT = surfaceAndGradients.querySelector(
+  ".description-text_TT"
+);
+const descriptionTexttraining = training.querySelector(".description-text");
+
+const bikesPaginationArrow = bikes.querySelector(".bikes__pagination-arrow");
+const bikesPagination = bikes.querySelector(".bikes__pagination");
 const bikesBlock = document.querySelector(".bikes");
 const bikesPaginationContainer = bikesBlock.querySelector(
   ".bikes__pagination-container"
 );
-const footer = document.querySelector(".footer");
-const themeSwitchFooter = footer.querySelector(".theme-switch__button-container");
-const themeSwitchHeader = header.querySelector(".theme-switch__button-container");
+const bikesSlides = bikesBlock.querySelector(".bikes__slides");
+
 const footerInputContainer = footer.querySelector(".footer__input-container");
-const footerYourEmail = footerInputContainer.querySelector(".footer__your-email");
-const footerInputContainerButton = footerInputContainer.querySelector(".footer__input-container-button");
+const footerYourEmail = footerInputContainer.querySelector(
+  ".footer__your-email"
+);
+const footerInputContainerButton = footerInputContainer.querySelector(
+  ".footer__input-container-button"
+);
+const themeSwitchFooter = footer.querySelector(
+  ".theme-switch__button-container"
+);
+const themeSwitchHeader = header.querySelector(
+  ".theme-switch__button-container"
+);
 
 installEventListenerPaginationOpeningButton(bikesPaginationContainer);
 installEventListenerMenuOpeningButton(buttonHeaderMenuOpened);
 installEventListenerMenuClosedButton(buttonHeaderMenuClosed);
 
-
 themeSwitchFooter.addEventListener("click", function (evt) {
-  themeSwitchFooter.classList.toggle("theme-switch__button-container_moon-position");
-  themeSwitchHeader.classList.toggle("theme-switch__button-container_moon-position");
-  page.classList.toggle("page_dark-theme");
-  buttonHeaderMenuOpened.classList.toggle("header__button_darkTheme");
+  darkTheme();
 });
 themeSwitchHeader.addEventListener("click", function (evt) {
-  themeSwitchHeader.classList.toggle("theme-switch__button-container_moon-position");
-  themeSwitchFooter.classList.toggle("theme-switch__button-container_moon-position");
-  page.classList.toggle("page_dark-theme");
-  buttonHeaderMenuOpened.classList.toggle("header__button_darkTheme");
+  darkTheme();
 });
-
 
 footerInputContainer.addEventListener("click", function (evt) {
-  footerYourEmail.placeholder = ""
-footerInputContainerButton.classList.add("footer__input-container-button_show");
+  footerYourEmail.placeholder = "";
+  footerInputContainerButton.classList.add(
+    "footer__input-container-button_show"
+  );
 });
 
-footerInputContainer.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  evt.target.reset(); // очистка формы
-  footerInputContainerButton.classList.remove("footer__input-container-button_show");
-  footerYourEmail.placeholder = "Круто!"
-});
+function darkTheme() {
+  themeSwitchHeader.classList.toggle(
+    "theme-switch__button-container_moon-position"
+  );
+  themeSwitchFooter.classList.toggle(
+    "theme-switch__button-container_moon-position"
+  );
+  page.classList.toggle("page_dark-theme");
+  buttonHeaderMenuOpened.classList.toggle("header__button_darkTheme");
+  descriptionTextIntro.classList.toggle("description-text_darkTheme");
+  descriptionTextHighway.classList.toggle("description-text_darkTheme");
+  descriptionTextGrevel.classList.toggle("description-text_darkTheme");
+  descriptionTextTT.classList.toggle("description-text_darkTheme");
+  descriptionTexttraining.classList.toggle("description-text_darkTheme");
+  bikesPaginationArrow.classList.toggle("bikes__pagination-arrow_darkTheme");
+  bikesPagination.classList.toggle("bikes__pagination_dark");
+  footer.classList.toggle("footer_darkTheme");
+  footer.classList.toggle("theme-switch__button-container_darkTheme");
+  bikesSlides.classList.toggle("bikes__slides_darkTheme");
+}
 
 function installEventListenerPaginationOpeningButton(button) {
- button.addEventListener("click", function (evt) {
+  button.addEventListener("click", function (evt) {
     openedMenuPagination(button);
   });
 }
 
 function installEventListenerMenuOpeningButton(button) {
-  console.log("installEventListenerMenuOpeningButton()");
   button.addEventListener("click", function (evt) {
     openedMenu();
   });
 }
 function installEventListenerMenuClosedButton(button) {
-  console.log("installEventListenerMenuClosedButton()");
   button.addEventListener("click", function (evt) {
     closedMenu();
   });
 }
 
 function openedMenuPagination(button) {
-  console.log("button", button);
-  button.classList.toggle(
-    "bikes__pagination-container_opened"
-  );
+  button.classList.toggle("bikes__pagination-container_opened");
 }
 
 function openedMenu() {
-  console.log("openedMenu()");
   headerMenu.classList.remove("header__menu_closed");
   buttonHeaderMenuOpened.classList.add("header__button_closed");
 }
 function closedMenu() {
-  console.log("closedMenu()");
   headerMenu.classList.add("header__menu_closed");
   buttonHeaderMenuOpened.classList.remove("header__button_closed");
 }
@@ -157,6 +188,3 @@ const slidesTT = new Swiper(".TT-slides", {
     600: { slidesPerView: 3 },
   },
 });
-
-
-console.log("end");

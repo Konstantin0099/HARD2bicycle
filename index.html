@@ -26,8 +26,6 @@
         </ul>
         <div class="header__mobile">
           <button class="header__button"></button>
-          <!-- header__button_closed header__button_opened-->
-
           <div class="header__menu header__menu_closed">
             <button class="header__button header__button_menu"></button>
             <ul class="header__list">
@@ -102,8 +100,9 @@
                 катайся»
               </h4>
             </blockquote>
-            <figcaption class="epigraph__caption description-text">
-              <cite class="epigraph__cite">Эдди Меркс</cite>Велогонщик
+            <figcaption class="epigraph__caption">
+              <cite class="epigraph__cite">Эдди Меркс</cite>
+              <span class="epigraph__profi">Велогонщик</span>
             </figcaption>
           </figure>
         </section>
@@ -111,9 +110,21 @@
         <section class="surfaceAndGradients">
           <div class="surfaceAndGradients__slides">
             <div class="swiper-wrapper">
-              <div class="swiper-slide surfaceAndGradients__slide">
-                <h2 class="surfaceAndGradients__slide-title title-text">Шоссе</h2>
-                <p class="surfaceAndGradients__slide-text description-text">
+              <div
+                class="
+                  swiper-slide
+                  surfaceAndGradients__slide surfaceAndGradients__slide
+                "
+              >
+                <h2 class="surfaceAndGradients__slide-title title-text">
+                  Шоссе
+                </h2>
+                <p
+                  class="
+                    surfaceAndGradients__slide-text
+                    description-text description-text_highway
+                  "
+                >
                   На шоссейном велосипеде можно ездить по асфальту на разных
                   градиентах: будь то горы или равнины. Гонки проходят в
                   командном пелотоне, но тренироваться можно и самостоятельно.
@@ -121,12 +132,24 @@
                 <img
                   class="surfaceAndGradients__image"
                   src="./images/serpentineRoad.png"
-                  alt="bike"
+                  alt="извилистая шоссейная дорога"
                 />
               </div>
-              <div class="swiper-slide surfaceAndGradients__slide">
-                <h2 class="surfaceAndGradients__slide-title title-text">Грэвел</h2>
-                <p class="surfaceAndGradients__slide-text description-text">
+              <div
+                class="
+                  swiper-slide
+                  surfaceAndGradients__slide surfaceAndGradients__slide_grevel
+                "
+              >
+                <h2 class="surfaceAndGradients__slide-title title-text">
+                  Грэвел
+                </h2>
+                <p
+                  class="
+                    surfaceAndGradients__slide-text
+                    description-text description-text_grevel
+                  "
+                >
                   Грэвел похож на шоссейный велосипед, но конструкция рамы
                   немного отличается, и на нём стоят более широкие покрышки, всё
                   для того чтобы проехать по лёгкому бездорожью.
@@ -139,7 +162,12 @@
               </div>
               <div class="swiper-slide surfaceAndGradients__slide">
                 <h2 class="surfaceAndGradients__slide-title title-text">TT</h2>
-                <p class="surfaceAndGradients__slide-text description-text">
+                <p
+                  class="
+                    surfaceAndGradients__slide-text
+                    description-text description-text_TT
+                  "
+                >
                   ТТ — это велосипед для триатлона или раздельного старта,
                   гооняют на таком велике только по равнинному асфальту, велик
                   очень быстрые и аэродинамичный.
@@ -173,7 +201,7 @@
             <h2 class="title-text">Велосипеды</h2>
             <div class="bikes__pagination-container">
               <div class="bikes__pagination bikes__pagination-mobile"></div>
-              <div class="bikes__pagination-arrow">&#9660;</div>
+              <div class="bikes__pagination-arrow"></div>
             </div>
           </div>
           <div class="bikes__slides">
@@ -202,7 +230,7 @@
                     <div class="swiper-slide bike__slide">
                       <a
                         href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -221,7 +249,7 @@
                       <a
                         href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -236,13 +264,10 @@
                       </a>
                     </div>
                   </div>
-                  <!-- <div class="highway-slides__next"></div> -->
                   <div
                     class="swiper-paginatio highway-slides__swiper-pagination"
                   ></div>
-                  <!-- <div class="highway-slides__prev"></div> -->
                 </div>
-                <!-- <div class="highway-slides__swiper-pagination"></div> -->
               </div>
 
               <div class="swiper-slide">
@@ -252,7 +277,7 @@
                       <a
                         href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -270,7 +295,7 @@
                       <a
                         href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -289,7 +314,7 @@
                       <a
                         href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -314,7 +339,7 @@
                       <a
                         href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -332,7 +357,7 @@
                       <a
                         href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -350,7 +375,7 @@
                       <a
                         href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835
                     "
-                        class="header__lang-link"
+                        class="bike__link"
                       >
                         <figure class="bike__card">
                           <img
@@ -410,10 +435,10 @@
           <form class="footer__input-container" name="form-your-data">
             <fieldset class="footer__your-data">
               <legend class="footer__title">Подпишитесь на рассылку -</legend>
-              <div class="footer__input-line">
+              <div class="footer__input-line footer__input-line_darkTheme">
                 <input
                   type="email"
-                  class="footer__your-email"
+                  class="footer__your-email footer__your-email_darkTheme"
                   name="your-email"
                   placeholder="Ваш e-mail"
                   value=""
@@ -446,15 +471,6 @@
           <div class="theme-switch__moon-icon"></div>
         </div>
       </footer>
-
-      <!-- <template id="elementsSection">
-        <div class="element">
-          <button class="trash" type="button"></button>
-          <img class="element__img" src="" alt="" />
-          <h2 class="element__figcaption"></h2>
-          <button class="like" type="button"></button>
-        </div>
-      </template> -->
     </div>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.js"></script>
     <script src="./scripts/script.js"></script>

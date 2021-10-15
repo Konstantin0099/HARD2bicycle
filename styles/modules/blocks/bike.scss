@@ -7,17 +7,44 @@
     margin: 0;
     padding: 0;
     object-fit: cover;
-  }
-  &__caption {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    // object-position: center;
-    // object-fit: contain;
-
+    border-radius: 20px;
     @media screen and (max-width: 600px) {
       & {
-         font-size: 14px;
+        background-color: $backgroundColor;
+      }
+    }
+  }
+  &__caption {
+    margin: 22px 0 0;
+    padding: 0;
+    @include font(
+      $fontWeight: 600,
+      $fontSize: 18px,
+      $lineHeight: 100%,
+      $opacity: 1
+    );
+    &_darkTheme {
+      color: #ffffff;
+      @media screen and (max-width: 600px) {
+        & {
+          color: #151515;
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      & {
+        font-size: 14px;
+        line-height: 106%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        padding-top: 6px;
+        padding-bottom: 16px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 106%;
+        box-sizing: content-box;
       }
     }
   }
@@ -33,7 +60,6 @@
         padding: 10px;
       }
     }
-
   }
   &__slide {
     width: auto;
@@ -45,7 +71,9 @@
   }
 
   &__link {
+    color: inherit;
     margin: 0;
     padding: 0;
+    text-decoration: none;
   }
 }

@@ -1,17 +1,17 @@
 .page {
-    position: relative;
-    width: 100%;
-    max-width: 1440px;
-    min-width: 280px;
-margin: 0;
-padding: 0;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-background-color: $backgroundColor;
-color: $colorTitle;
-&_dark-theme{
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 280px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $backgroundColor;
+  color: $colorTitle;
+  &_dark-theme {
     background-color: $backgroundColorDarkTheme;
     color: $colorDarkTheme;
   }
