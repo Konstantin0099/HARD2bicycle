@@ -7,6 +7,18 @@
   width: 140px;
   margin: auto 0 0 0;
   padding: 0;
+  @media screen and (max-width: 600px) {
+    & {
+      margin: 0 auto;
+    }
+  }
+  &_header {
+    @media screen and (min-width: 600px) {
+      & {
+        display: none;
+      }
+    }
+  }
   &_mobile {
     @media screen and (max-width: 600px) {
       & {

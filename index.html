@@ -13,33 +13,21 @@
   <body class="body">
     <div class="page">
       <header class="header">
-        <ul class="header__list header__list_desktop">
-          <li class="header__item-nav">
-            <a href="#" class="header__nav">Покрытия и градиенты</a>
-          </li>
-          <li class="header__item-nav">
-            <a href="#" class="header__nav">Велосипеды</a>
-          </li>
-          <li class="header__item-nav">
-            <a href="#" class="header__nav">Тренировки</a>
-          </li>
-        </ul>
-        <div class="header__mobile">
-          <button class="header__button"></button>
-          <div class="header__menu header__menu_closed">
-            <button class="header__button header__button_menu"></button>
+          <button class="header__button header__button_openedMenu_lightTheme"></button>
+            <button class="header__button header__button_closedMenu_lightTheme header__button_mobile_closed"></button>
+            <nav class="header__nav header__nav_menu_closed">
             <ul class="header__list">
               <li class="header__item-nav">
-                <a href="#" class="header__nav">Покрытия и градиенты</a>
+                <a href="#" class="header__link">Покрытия и градиенты</a>
               </li>
               <li class="header__item-nav">
-                <a href="#" class="header__nav">Велосипеды</a>
+                <a href="#" class="header__link">Велосипеды</a>
               </li>
               <li class="header__item-nav">
-                <a href="#" class="header__nav">Тренировки</a>
+                <a href="#" class="header__link">Тренировки</a>
               </li>
             </ul>
-            <div class="theme-switch">
+            <div class="theme-switch theme-switch_header">
               <div class="theme-switch__sun-icon"></div>
               <div class="theme-switch__button-container">
                 <img
@@ -50,8 +38,7 @@
               </div>
               <div class="theme-switch__moon-icon"></div>
             </div>
-          </div>
-        </div>
+          </nav>
       </header>
       <main class="content">
         <section class="intro">
