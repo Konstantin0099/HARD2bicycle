@@ -17,11 +17,10 @@
   }
 
   &__slides {
-    // color: #151515;
+    color: inherit;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     &_darkTheme {
-
       @media screen and (max-width: 600px) {
         & {
           color: #151515;
@@ -29,7 +28,9 @@
       }
     }
   }
-
+  // &__slides-group {
+  //   width: 100%;
+  // }
   &__pagination {
     display: flex;
     flex-direction: row;
@@ -49,23 +50,35 @@
       $letterSpacing: normal,
       $opacity: 1
     );
+    @media screen and (max-width: 600px) {
+      & {
+        font-size: 11px;
+        width: 50%;
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        height: 80px;
+        margin: 0px;
+        max-width: 250px;
+      }
+    }
     &_dark {
       color: #ffffff;
     }
-    &-mobile {
-      @media screen and (max-width: 600px) {
-        & {
-          font-size: 11px;
-          width: 50%;
-          display: flex;
-          visibility: visible;
-          flex-direction: column;
-          height: 80px;
-          margin: 0px;
-          max-width: 250px;
-        }
-      }
-    }
+    // &-mobile {
+    //   @media screen and (max-width: 600px) {
+    //     & {
+    //       font-size: 11px;
+    //       width: 50%;
+    //       display: flex;
+    //       visibility: visible;
+    //       flex-direction: column;
+    //       height: 80px;
+    //       margin: 0px;
+    //       max-width: 250px;
+    //     }
+    //   }
+    // }
     & > .swiper-pagination-bullet {
       background-color: inherit;
       height: 20px;
@@ -120,6 +133,7 @@
         }
       }
     }
+
     & > .swiper-pagination-bullet-active {
       color: inherit;
       opacity: 1;
@@ -131,9 +145,7 @@
       }
     }
   }
-  &__slides-group {
-    width: 100%;
-  }
+ 
   @media screen and (max-width: 1240px) {
     & {
       padding-right: 90px;

@@ -134,7 +134,7 @@ const slides = new Swiper(".surfaceAndGradients__slides", {
 
 const bikesGroup = ["Шоссе", "Грэвел", "TT"];
 const slidesBikes = new Swiper(".bikes__slides", {
-  spaceBetween: 650,
+  spaceBetween: 1650,
   pagination: {
     el: ".bikes__pagination",
     clickable: true,
@@ -147,9 +147,9 @@ const slidesBikes = new Swiper(".bikes__slides", {
   slidesPerGroup: 1,
 });
 
-const slidesHighway = new Swiper(".highway-slides", {
+const slidesHighway = new Swiper(".slides", {
   pagination: {
-    el: ".highway-slides__swiper-pagination",
+    el: ".slides__swiper-pagination",
     clickable: true,
   },
   slidesPerView: 1,
@@ -158,33 +158,7 @@ const slidesHighway = new Swiper(".highway-slides", {
   slidesPerGroup: 1,
   nested: true,
   breakpoints: {
-    600: { slidesPerView: 3 },
-  },
-});
-const slidesGravel = new Swiper(".gravel-slides", {
-  spaceBetween: 30,
-  pagination: {
-    el: ".gravel-slides__swiper-pagination",
-    clickable: true,
-  },
-  slidesPerView: 1,
-  wateOverflow: true,
-  slidesPerGroup: 1,
-  nested: true,
-  breakpoints: {
-    600: { slidesPerView: 3 },
-  },
-});
-const slidesTT = new Swiper(".TT-slides", {
-  spaceBetween: 30,
-  pagination: {
-    el: ".TT-slides__swiper-pagination",
-    clickable: true,
-  },
-  slidesPerView: 1,
-  wateOverflow: true,
-  slidesPerGroup: 1,
-  breakpoints: {
-    600: { slidesPerView: 3 },
+    600: { slidesPerView: 2 },
+    900: { slidesPerView: 3 },
   },
 });
