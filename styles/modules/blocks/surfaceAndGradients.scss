@@ -10,7 +10,7 @@
     "slide"
     "button";
   margin: 0;
-  padding: 60px 0 0 0;
+  padding: 120px 0 0 0;
   width: 100%;
   @media screen and (max-width: 600px) {
     & {
@@ -81,7 +81,7 @@
       visibility: visible;
     }
     visibility: hidden;
-    margin: 0px 0 10px 0;
+    margin: 3px 0 0;
     width: 25%;
   }
   &__container-button-slide {
@@ -98,7 +98,7 @@
         top: 40px;
         right: 0px;
         grid-area: title;
-        margin-top: 0px;
+        margin-top: 10px;
         margin-right: 0px;
         height: 24px;
         width: 58px;

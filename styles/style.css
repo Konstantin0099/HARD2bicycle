@@ -157,7 +157,7 @@
 @media screen and (max-width: 600px) {
   .header__button {
     display: block;
-    margin: 30px 20px 30px auto;
+    margin: 26px 19px 30px auto;
   }
 }
 .header__button_mobile_closed {
@@ -181,7 +181,7 @@
 }
 
 .epigraph {
-  padding: 120px 0 60px 0;
+  padding: 120px 0 0;
   margin-right: 120px;
   display: flex;
   flex-wrap: wrap;
@@ -200,6 +200,7 @@
 }
 @media screen and (max-width: 600px) {
   .epigraph {
+    border-top: 1px solid inherit;
     flex-direction: column;
     margin-right: 0px;
   }
@@ -214,8 +215,9 @@
 }
 @media screen and (max-width: 600px) {
   .epigraph__image {
+    min-height: 204px;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 32px;
     border-top: 1px #584e4e solid;
   }
 }
@@ -262,7 +264,7 @@
   .epigraph__title {
     margin-top: 0px;
     font-size: 23px;
-    line-height: 104%;
+    line-height: 126%;
   }
 }
 .epigraph__caption {
@@ -315,7 +317,7 @@
   grid-column-gap: 0;
   grid-template-areas: "slide" "button";
   margin: 0;
-  padding: 60px 0 0 0;
+  padding: 120px 0 0 0;
   width: 100%;
 }
 @media screen and (max-width: 600px) {
@@ -375,7 +377,7 @@
 .surfaceAndGradients__slide-title {
   grid-area: title;
   visibility: hidden;
-  margin: 0px 0 10px 0;
+  margin: 3px 0 0;
   width: 25%;
 }
 .swiper-slide-active > .surfaceAndGradients__slide-title {
@@ -396,7 +398,7 @@
     top: 40px;
     right: 0px;
     grid-area: title;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-right: 0px;
     height: 24px;
     width: 58px;
@@ -438,7 +440,7 @@
   display: block;
 }
 .bikes__header {
-  margin-bottom: 120px;
+  margin-bottom: 85px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -446,13 +448,20 @@
 }
 @media screen and (max-width: 600px) {
   .bikes__header {
+    margin-bottom: 10px;
     flex-direction: column;
     align-items: flex-start;
   }
 }
 .bikes__title {
-  margin: 0;
+  margin: 0 0px 42px 0;
   padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .bikes__title {
+    margin-bottom: 0;
+    color: #151515;
+  }
 }
 .bikes__slides {
   color: inherit;
@@ -483,21 +492,28 @@
 }
 @media screen and (max-width: 600px) {
   .bikes__pagination {
-    position: relative;
-    top: 0px;
+    overflow: hidden;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+    border: solid 1px #e3e3e3;
+    border-radius: 4px;
+    position: absolute;
+    top: 7px;
+    left: 6px;
     font-size: 11px;
     width: 50%;
+    height: 26%;
     display: flex;
     visibility: visible;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 80px;
     margin: 0px;
     max-width: 250px;
   }
   .bikes__pagination::after {
     position: absolute;
-    top: 2px;
+    top: 6px;
     right: 0px;
     content: "";
     height: 7px;
@@ -508,7 +524,7 @@
   }
   .bikes__pagination_darkTheme::after {
     position: absolute;
-    top: 2px;
+    top: 6px;
     right: 0px;
     content: "";
     height: 7px;
@@ -516,6 +532,9 @@
     background-image: url("../../../images/mobile/chooseBikeDarkTheme.svg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .bikes__pagination_opened {
+    height: 75%;
   }
 }
 .bikes__pagination_dark {
@@ -530,7 +549,8 @@
   margin-left: 0;
 }
 .bikes__pagination-container {
-  margin-top: auto;
+  z-index: 10;
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -541,12 +561,10 @@
 }
 @media screen and (max-width: 600px) {
   .bikes__pagination-container {
-    height: 30px;
-    margin-bottom: 80px;
-    padding: 8px 12px 8px 12px;
-    border: solid 1px #e3e3e3;
-    border-radius: 2px;
-    width: 114px;
+    height: 80px;
+    border-bottom: solid 1px #e3e3e3;
+    top: 40px;
+    width: 105px;
   }
 }
 .bikes__pagination-container_opened {
@@ -554,8 +572,7 @@
 }
 @media screen and (max-width: 600px) {
   .bikes__pagination-container_opened {
-    height: 100px;
-    margin-bottom: 10px;
+    height: 80px;
   }
 }
 .bikes__pagination > .swiper-pagination-bullet-active {
@@ -637,12 +654,12 @@
 }
 @media screen and (max-width: 600px) {
   .bike__caption {
-    padding-top: 6px;
-    padding-bottom: 16px;
+    margin: 0;
+    padding-bottom: 10px;
     text-align: center;
     font-size: 14px;
     line-height: 106%;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
 }
 .bike__image {
@@ -664,6 +681,8 @@
 }
 @media screen and (max-width: 600px) {
   .bike__image {
+    width: 99%;
+    padding-bottom: 0;
     box-shadow: none;
   }
   .bike__image:hover {
@@ -714,7 +733,9 @@
 }
 @media screen and (max-width: 600px) {
   .training {
+    padding-top: 30px;
     padding-right: 0;
+    padding-bottom: 75px;
     flex-direction: column;
   }
 }
@@ -730,7 +751,7 @@
 @media screen and (max-width: 600px) {
   .training__text {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 35px;
   }
 }
 .training__title {
@@ -751,12 +772,6 @@
   }
 }
 .training__paragraph {
-  margin: 0;
-  display: block;
-}
-.training__link {
-  color: inherit;
-  text-decoration: none;
   margin: 0;
   display: block;
 }
@@ -790,10 +805,12 @@
 }
 @media screen and (max-width: 600px) {
   .training__links {
+    max-width: 125px;
     margin: 40px 0 50px 0;
   }
 }
 .training__link {
+  margin: 0;
   display: block;
   text-decoration: none;
   color: inherit;
@@ -804,6 +821,12 @@
   line-height: 128%;
   letter-spacing: normal;
   opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  .training__link {
+    font-size: 14px;
+    line-height: 143%;
+  }
 }
 .training__link:hover {
   opacity: 0.75;
@@ -841,6 +864,7 @@
 }
 @media screen and (max-width: 600px) {
   .footer {
+    padding-top: 0;
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -922,6 +946,7 @@
 }
 @media screen and (max-width: 600px) {
   .footer__input-line {
+    margin-bottom: 13px;
     width: 100%;
   }
 }
@@ -945,6 +970,7 @@
 }
 @media screen and (max-width: 600px) {
   .footer__logo-container {
+    margin-top: 78px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -978,7 +1004,7 @@
   .intro {
     grid-column-gap: 0;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 50% 20% 10%;
+    grid-template-rows: 24% minmax(348px, 50%) 20% 6%;
     grid-template-areas: "title" "image" "your-choice" "more-detailed-button";
   }
 }
@@ -996,12 +1022,12 @@
 }
 @media screen and (max-width: 930px) {
   .intro__title {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 700px) {
   .intro__title {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1029,6 +1055,7 @@
 }
 @media screen and (max-width: 600px) {
   .intro__description {
+    margin-top: 7px;
     max-width: 100%;
   }
 }
@@ -1096,15 +1123,16 @@
 }
 @media screen and (max-width: 600px) {
   .intro__bike-fix {
-    min-width: 147px;
+    min-width: 182px;
     transform: translateX(-10px);
     top: 100px;
     margin-left: 10px;
-    margin-bottom: 19px;
-    margin-top: 50px;
+    margin-bottom: 2px;
+    margin-top: 99px;
   }
 }
 .intro__image {
+  min-height: 348px;
   height: 100%;
   width: 100%;
   justify-self: end;
@@ -1134,7 +1162,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 150%;
   letter-spacing: 1px;
   opacity: 1;
 }
@@ -1146,6 +1174,7 @@
 }
 @media screen and (max-width: 600px) {
   .intro__more-detailed-button {
+    margin-top: 10px;
     width: 100%;
   }
 }
@@ -1210,6 +1239,10 @@
   margin: 0;
 }
 .slides__swiper-pagination > .swiper-pagination-bullet {
+  height: 4px;
+  width: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #8ea52a;
   background-color: #151515;
 }
@@ -1218,9 +1251,9 @@
 }
 @media screen and (max-width: 900px) {
   .slides__swiper-pagination {
-    margin-top: 36px;
+    margin-top: 27px;
     justify-content: center;
-    height: 20px;
+    height: 5px;
   }
 }
 
@@ -1336,7 +1369,7 @@
 @media screen and (max-width: 600px) {
   .description-text {
     font-size: calc(12px - ((320px - 100vw) * 0.041));
-    line-height: 125%;
+    line-height: 150%;
   }
 }
 .description-text_darkTheme {

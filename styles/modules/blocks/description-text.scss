@@ -17,7 +17,7 @@
   @media screen and (max-width: 600px) {
     & {
       font-size: calc(12px - ((320px - 100vw) * 0.041));
-      line-height: 125%;
+      line-height: 150%;
     }
   }
   &_darkTheme {
