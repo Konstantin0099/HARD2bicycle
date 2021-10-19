@@ -6,9 +6,9 @@ const bikes = document.querySelector(".bikes");
 const training = document.querySelector(".training");
 const footer = document.querySelector(".footer");
 
-const buttonHeaderMenuOpened = header.querySelector(".header__button");
-const headerMenu = header.querySelector(".header__menu");
-const buttonHeaderMenuClosed = headerMenu.querySelector(".header__button");
+const buttonHeaderMenuOpened = header.querySelector(".header__button_openedMenu_lightTheme");
+const headerMenu = header.querySelector(".header__nav");
+const buttonHeaderMenuClosed = header.querySelector(".header__button_closedMenu_lightTheme");
 
 const descriptionTextIntro = intro.querySelector(".description-text");
 const descriptionTextHighway = surfaceAndGradients.querySelector(
@@ -70,13 +70,16 @@ function darkTheme() {
     "theme-switch__button-container_moon-position"
   );
   page.classList.toggle("page_dark-theme");
-  buttonHeaderMenuOpened.classList.toggle("header__button_darkTheme");
+  buttonHeaderMenuOpened.classList.toggle("header__button_openedMenu_darkTheme");
+  buttonHeaderMenuOpened.classList.toggle("header__button_openedMenu_lightTheme");
+  buttonHeaderMenuClosed.classList.toggle("header__button_closedMenu_lightTheme");
+  buttonHeaderMenuClosed.classList.toggle("header__button_closedMenu_darkTheme");
   descriptionTextIntro.classList.toggle("description-text_darkTheme");
   descriptionTextHighway.classList.toggle("description-text_darkTheme");
   descriptionTextGrevel.classList.toggle("description-text_darkTheme");
   descriptionTextTT.classList.toggle("description-text_darkTheme");
   descriptionTexttraining.classList.toggle("description-text_darkTheme");
-  bikesPaginationArrow.classList.toggle("bikes__pagination-arrow_darkTheme");
+  bikesPagination.classList.toggle("bikes__pagination_darkTheme");
   bikesPagination.classList.toggle("bikes__pagination_dark");
   footer.classList.toggle("footer_darkTheme");
   footer.classList.toggle("theme-switch__button-container_darkTheme");
@@ -91,12 +94,12 @@ function installEventListenerPaginationOpeningButton(button) {
 
 function installEventListenerMenuOpeningButton(button) {
   button.addEventListener("click", function (evt) {
-    openedMenu();
+    clickButtonOpenedClosedMenu()
   });
 }
 function installEventListenerMenuClosedButton(button) {
   button.addEventListener("click", function (evt) {
-    closedMenu();
+    clickButtonOpenedClosedMenu()
   });
 }
 
@@ -104,13 +107,10 @@ function openedMenuPagination(button) {
   button.classList.toggle("bikes__pagination-container_opened");
 }
 
-function openedMenu() {
-  headerMenu.classList.remove("header__menu_closed");
-  buttonHeaderMenuOpened.classList.add("header__button_closed");
-}
-function closedMenu() {
-  headerMenu.classList.add("header__menu_closed");
-  buttonHeaderMenuOpened.classList.remove("header__button_closed");
+function clickButtonOpenedClosedMenu() {
+  buttonHeaderMenuOpened.classList.toggle("header__button_mobile_closed");
+  buttonHeaderMenuClosed.classList.toggle("header__button_mobile_closed");
+  headerMenu.classList.toggle("header__nav_menu_closed");
 }
 
 const slides = new Swiper(".surfaceAndGradients__slides", {
@@ -134,7 +134,7 @@ const slides = new Swiper(".surfaceAndGradients__slides", {
 
 const bikesGroup = ["Шоссе", "Грэвел", "TT"];
 const slidesBikes = new Swiper(".bikes__slides", {
-  spaceBetween: 650,
+  spaceBetween: 1650,
   pagination: {
     el: ".bikes__pagination",
     clickable: true,
@@ -147,9 +147,9 @@ const slidesBikes = new Swiper(".bikes__slides", {
   slidesPerGroup: 1,
 });
 
-const slidesHighway = new Swiper(".highway-slides", {
+const slidesHighway = new Swiper(".slides", {
   pagination: {
-    el: ".highway-slides__swiper-pagination",
+    el: ".slides__swiper-pagination",
     clickable: true,
   },
   slidesPerView: 1,
@@ -158,33 +158,7 @@ const slidesHighway = new Swiper(".highway-slides", {
   slidesPerGroup: 1,
   nested: true,
   breakpoints: {
-    600: { slidesPerView: 3 },
-  },
-});
-const slidesGravel = new Swiper(".gravel-slides", {
-  spaceBetween: 30,
-  pagination: {
-    el: ".gravel-slides__swiper-pagination",
-    clickable: true,
-  },
-  slidesPerView: 1,
-  wateOverflow: true,
-  slidesPerGroup: 1,
-  nested: true,
-  breakpoints: {
-    600: { slidesPerView: 3 },
-  },
-});
-const slidesTT = new Swiper(".TT-slides", {
-  spaceBetween: 30,
-  pagination: {
-    el: ".TT-slides__swiper-pagination",
-    clickable: true,
-  },
-  slidesPerView: 1,
-  wateOverflow: true,
-  slidesPerGroup: 1,
-  breakpoints: {
-    600: { slidesPerView: 3 },
+    600: { slidesPerView: 2 },
+    900: { slidesPerView: 3 },
   },
 });

@@ -11,11 +11,15 @@
     @media screen and (max-width: 600px) {
       & {
         background-color: $backgroundColor;
+        box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.44);
+      }
+      &:hover {
+        box-shadow: 0px 20px 140px 0 rgba(0, 0, 0, 0.11);
       }
     }
   }
   &__caption {
-    margin: 22px 0 0;
+    margin: 20px 0 0 6px;
     padding: 0;
     @include font(
       $fontWeight: 600,
@@ -49,31 +53,49 @@
     }
   }
   &__image {
+    box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.44);
     background-color: $backgroundColor;
     width: 100%;
-    margin: 0;
+    margin: 0px;
     padding: 20px;
     border-radius: 20px;
     box-sizing: border-box;
+    &:hover {
+      box-shadow: 0px 20px 140px 0 rgba(0, 0, 0, 0.11);
+    }
+
     @media screen and (max-width: 1000px) {
       & {
         padding: 10px;
       }
     }
-  }
-  &__slide {
-    width: auto;
-    cursor: pointer;
-    visibility: visible;
-    overflow: hidden;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    @media screen and (max-width: 600px) {
+      & {
+        box-shadow: none;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
   }
 
   &__link {
+    cursor: pointer;
+    // visibility: visible;
     color: inherit;
     margin: 0;
     padding: 0;
     text-decoration: none;
+  }
+
+  & > .swiper-pagination-bullet-active {
+    color: inherit;
+    opacity: 1;
+    @media screen and (max-width: 600px) {
+      & {
+        order: 0;
+        visibility: visible;
+      }
+    }
   }
 }

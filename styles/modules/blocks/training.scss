@@ -1,7 +1,7 @@
 .training {
   color: inherit;
   padding: 120px 120px 120px 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -35,7 +35,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    width: 32%;
+    width: 39%;
     @media screen and (max-width: 600px) {
       & {
         width: 100%;
@@ -45,8 +45,7 @@
   }
   &__title {
     color: inherit;
-    margin: 0;
-    margin-bottom: 50px;
+    margin: 5px 0 45px 0;
     display: block;
     &_mobile {
       display: none;
@@ -65,13 +64,7 @@
     margin: 0;
     display: block;
   }
-  &__strava {
-    color: inherit;
-    text-decoration: none;
-    margin: 0;
-    display: block;
-  }
-  &__komoot {
+  &__link {
     color: inherit;
     text-decoration: none;
     margin: 0;
@@ -82,7 +75,7 @@
     display: flex;
     object-fit: cover;
     flex-wrap: wrap;
-    width: 54%;
+    width: 48%;
     @media screen and (max-width: 600px) {
       & {
         order: -1;
@@ -98,7 +91,7 @@
   &__links {
     color: inherit;
     padding: 0;
-    max-width: 140px;
+    max-width: 150px;
     margin: 0;
     margin-top: auto;
     display: flex;
