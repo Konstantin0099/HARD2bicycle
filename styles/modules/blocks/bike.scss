@@ -2,7 +2,6 @@
   width: 100%;
 
   &__card {
-   
     width: 100%;
     display: block;
     margin: 0;
@@ -28,12 +27,7 @@
       $lineHeight: 100%,
       $opacity: 1
     );
-    // @media screen and (max-width: 600px) {
-    //   & {
-    //     margin: 0;
-    //     padding: 0px 0 35px 0px;
-    //   }
-    // }
+
     &_darkTheme {
       color: #ffffff;
       @media screen and (max-width: 600px) {
@@ -90,7 +84,6 @@
 
   &__link {
     cursor: pointer;
-    // visibility: visible;
     color: inherit;
     margin: 0;
     padding: 0;
