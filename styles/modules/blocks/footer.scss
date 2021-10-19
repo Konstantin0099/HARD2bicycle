@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  padding: 80px 120px 60px 120px;
+  padding: 90px 120px 60px 120px;
   box-sizing: border-box;
   background-color: rgba(239, 239, 239, 1);
   display: flex;
@@ -29,6 +29,7 @@
   }
   @media screen and (max-width: 600px) {
     & {
+      padding-top: 0;
       padding-left: 18px;
       padding-right: 18px;
     }
@@ -59,7 +60,7 @@
     @include font(
       $fontWeight: 600,
       $fontSize: 24px,
-      $lineHeight: 110%,
+      $lineHeight: 133%,
       $letterSpacing: normal,
       $opacity: 1
     );
@@ -79,6 +80,7 @@
       $letterSpacing: normal,
       $opacity: 1
     );
+
     &_darkTheme {
       color: #ffffff;
       opacity: 0.7;
@@ -110,6 +112,7 @@
 
     @media screen and (max-width: 600px) {
       & {
+        margin-bottom: 13px;
         width: 100%;
       }
     }
@@ -128,12 +131,12 @@
     );
   }
   &__logo-container {
-    margin-top: 90px;
-    // width: 38px;
+    margin-top: 98px;
     width: 100%;
     height: 20px;
     @media screen and (max-width: 600px) {
       & {
+        margin-top: 78px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

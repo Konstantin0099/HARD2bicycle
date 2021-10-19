@@ -44,7 +44,8 @@ const themeSwitchHeader = header.querySelector(
   ".theme-switch__button-container"
 );
 
-installEventListenerPaginationOpeningButton(bikesPaginationContainer);
+installEventListenerPaginationOpeningButton(bikesPagination);
+// installEventListenerPaginationOpeningButton(bikesPaginationContainer);
 installEventListenerMenuOpeningButton(buttonHeaderMenuOpened);
 installEventListenerMenuClosedButton(buttonHeaderMenuClosed);
 
@@ -79,7 +80,7 @@ function darkTheme() {
   descriptionTextGrevel.classList.toggle("description-text_darkTheme");
   descriptionTextTT.classList.toggle("description-text_darkTheme");
   descriptionTexttraining.classList.toggle("description-text_darkTheme");
-  bikesPaginationArrow.classList.toggle("bikes__pagination-arrow_darkTheme");
+  bikesPagination.classList.toggle("bikes__pagination_darkTheme");
   bikesPagination.classList.toggle("bikes__pagination_dark");
   footer.classList.toggle("footer_darkTheme");
   footer.classList.toggle("theme-switch__button-container_darkTheme");
@@ -104,7 +105,8 @@ function installEventListenerMenuClosedButton(button) {
 }
 
 function openedMenuPagination(button) {
-  button.classList.toggle("bikes__pagination-container_opened");
+  button.classList.toggle("bikes__pagination_opened");
+  // button.classList.toggle("bikes__pagination-container_opened");
 }
 
 function clickButtonOpenedClosedMenu() {
