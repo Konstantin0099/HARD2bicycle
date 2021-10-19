@@ -1,5 +1,5 @@
 .epigraph {
-  padding: 120px 0 60px 0;
+  padding: 120px 0 0;
   margin-right: 120px;
   display: flex;
   flex-wrap: wrap;
@@ -17,6 +17,7 @@
   }
   @media screen and (max-width: 600px) {
     & {
+      border-top: 1px solid inherit;
       flex-direction: column;
       margin-right: 0px;
     }
@@ -29,8 +30,9 @@
     width: 54%;
     @media screen and (max-width: 600px) {
       & {
+        min-height: 204px;
         width: 100%;
-        padding-top: 20px;
+        padding-top: 32px;
         border-top: 1px rgb(88, 78, 78) solid;
       }
     }
@@ -76,7 +78,7 @@
       & {
         margin-top: 0px;
         font-size: 23px;
-        line-height: 104%;
+        line-height: 126%;
       }
     }
   }

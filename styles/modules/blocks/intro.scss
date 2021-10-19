@@ -18,7 +18,7 @@
     & {
       grid-column-gap: 0;
       grid-template-columns: 100%;
-      grid-template-rows: 20% 50% 20% 10%;
+      grid-template-rows: 24% minmax(348px, 50%) 20% 6%;
       grid-template-areas:
         "title"
         "image"
@@ -39,12 +39,12 @@
     }
     @media screen and (max-width: 930px) {
       & {
-        margin-top: 20px;
+        margin-top: 30px;
       }
     }
     @media screen and (max-width: 700px) {
       & {
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
     @media screen and (max-width: 600px) {
@@ -73,6 +73,7 @@
     }
     @media screen and (max-width: 600px) {
       & {
+        margin-top: 7px;
         max-width: 100%;
       }
     }
@@ -141,16 +142,17 @@
     }
     @media screen and (max-width: 600px) {
       & {
-        min-width: 147px;
+        min-width: 182px;
         transform: translateX(-10px);
         top: 100px;
         margin-left: 10px;
-        margin-bottom: 19px;
-        margin-top: 50px;
+        margin-bottom: 2px;
+        margin-top: 99px;
       }
     }
   }
   &__image {
+    min-height: 348px;
     height: 100%;
     width: 100%;
     justify-self: end;
@@ -181,7 +183,7 @@
       $fontStyle: normal,
       $fontWeight: 600,
       $fontSize: 14px,
-      $lineHeight: 18px,
+      $lineHeight: 150%,
       $letterSpacing: 1px
     );
     @media screen and (max-width: 1000px) {
@@ -192,6 +194,7 @@
     }
     @media screen and (max-width: 600px) {
       & {
+        margin-top: 10px;
         width: 100%;
       }
     }

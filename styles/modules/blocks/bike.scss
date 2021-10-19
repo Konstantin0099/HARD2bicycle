@@ -27,6 +27,7 @@
       $lineHeight: 100%,
       $opacity: 1
     );
+
     &_darkTheme {
       color: #ffffff;
       @media screen and (max-width: 600px) {
@@ -43,12 +44,12 @@
     }
     @media screen and (max-width: 600px) {
       & {
-        padding-top: 6px;
-        padding-bottom: 16px;
+        margin: 0;
+        padding-bottom: 10px;
         text-align: center;
         font-size: 14px;
         line-height: 106%;
-        box-sizing: content-box;
+        box-sizing: border-box;
       }
     }
   }
@@ -71,6 +72,8 @@
     }
     @media screen and (max-width: 600px) {
       & {
+        width: 99%;
+        padding-bottom: 0;
         box-shadow: none;
         &:hover {
           box-shadow: none;
@@ -81,7 +84,6 @@
 
   &__link {
     cursor: pointer;
-    // visibility: visible;
     color: inherit;
     margin: 0;
     padding: 0;
