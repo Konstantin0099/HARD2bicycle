@@ -1,65 +1,169 @@
 .bikes {
-  padding: 120px 80px 0 0;
+  background-color: inherit;
+  padding: 120px 120px 0 0;
   box-sizing: content-box;
-  width: 100%;
-  // @include mp(0, 0);
-  @include display();
-
+  display: block;
   &__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 600px) {
+      & {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 
   &__slides {
+    color: inherit;
     width: 100%;
-      margin: 0 auto;
-      overflow: hidden;
-    // width: (calc(340px - ((1440px - 100vw) * 0.14)));
-    // @include mp(0, 0, 20px, 50px);       надо вернуть !!!!!!!!!!!!!!!!!!!!!
-
-
-
-    // transform: translate(0vw, 0);
-
-
+    // overflow: hidden;
+    &_darkTheme {
+      @media screen and (max-width: 600px) {
+        & {
+          color: #151515;
+        }
+      }
+    }
   }
-  &__swiper-wraper {
-    margin: 0;
-    padding: 0;
-  }
-  
+  // &__slides-group {
+  //   width: 100%;
+  // }
   &__pagination {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: auto 0;
     max-width: 250px;
-    height: 28px;
-  }
-  &__swiper-button-prev {
-    margin-left: 100px;
-    width: 50px;
-    height: 30px;
-    background-color: blue;
-  }
-  &__swiper-button-next {
-    width: 50px;
-    height: 30px;
-    background-color: yellowgreen;
-  }
-  &__slides-group{
-    width: 100%;
-    border: orchid 1px solid;
-  }
-}
+    height: 100%;
+    visibility: visible;
+    background-color: inherit;
+    color: #222222;
+    @include font(
+      $family: "inter",
+      $fontStyle: normal,
+      $fontWeight: 600,
+      $fontSize: 18px,
+      $lineHeight: 128%,
+      $letterSpacing: normal,
+      $opacity: 1
+    );
+    @media screen and (max-width: 600px) {
+      & {
+        font-size: 11px;
+        width: 50%;
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        height: 80px;
+        margin: 0px;
+        max-width: 250px;
+      }
+    }
+    &_dark {
+      color: #ffffff;
+    }
+    // &-mobile {
+    //   @media screen and (max-width: 600px) {
+    //     & {
+    //       font-size: 11px;
+    //       width: 50%;
+    //       display: flex;
+    //       visibility: visible;
+    //       flex-direction: column;
+    //       height: 80px;
+    //       margin: 0px;
+    //       max-width: 250px;
+    //     }
+    //   }
+    // }
+    & > .swiper-pagination-bullet {
+      background-color: inherit;
+      height: 20px;
+      width: auto;
+      order: 1;
+      opacity: 0.7;
+    }
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      box-sizing: border-box;
+      overflow: hidden;
+      height: 24px;
+      width: 300px;
+      @media screen and (max-width: 600px) {
+        & {
+          height: 30px;
+          margin-bottom: 80px;
+          padding: 8px 12px 8px 12px;
+          border: solid 1px #e3e3e3;
+          border-radius: 2px;
+          width: 114px;
+        }
+      }
+      &_opened {
+        height: 20px;
+        visibility: visible;
+        @media screen and (max-width: 600px) {
+          & {
+            height: 100px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    &-arrow {
+      display: none;
+      @media screen and (max-width: 600px) {
+        & {
+          margin-top: 4px;
+          height: 7px;
+          width: 14px;
+          background-image: url("../../../images/mobile/chooseBike.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position-y: top;
+          display: block;
+        }
+        &_darkTheme {
+          background-image: url("../../../images/mobile/chooseBikeDarkTheme.svg");
+        }
+      }
+    }
 
-.bikes__pagination > .swiper-pagination-bullet {
-  background-color: #f4f4f4;
-  height: 20px;
-  width: auto;
-  // display: block;
+    & > .swiper-pagination-bullet-active {
+      color: inherit;
+      opacity: 1;
+      @media screen and (max-width: 600px) {
+        & {
+          order: 0;
+          visibility: visible;
+        }
+      }
+    }
+  }
+ 
+  @media screen and (max-width: 1240px) {
+    & {
+      padding-right: 90px;
+    }
+  }
+  @media screen and (max-width: 1040px) {
+    & {
+      padding-right: 60px;
+    }
+  }
+  @media screen and (max-width: 840px) {
+    & {
+      padding-right: 30px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    & {
+      padding-right: 0;
+    }
+  }
 }
-// .bikes__pagination + .swiper-pagination-bullet-active {
-//   border-radius: 10%;
-// }

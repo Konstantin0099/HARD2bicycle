@@ -1,5 +1,4 @@
 .surfaceAndGradients {
-  
   overflow: hidden;
   position: relative;
   display: grid;
@@ -12,18 +11,14 @@
     "button";
   margin: 0;
   padding: 60px 0 0 0;
-
   width: 100%;
-  //   @include mp();
-  //   @include display();
-  @include color();
-
   @media screen and (max-width: 600px) {
     & {
-    border-top: #E3E3E3 1px solid;
-    padding-top: 40px;
-    margin-top: 40px;
-    }}
+      border-top: #e3e3e3 1px solid;
+      padding-top: 40px;
+      margin-top: 40px;
+    }
+  }
 
   &__slide {
     grid-area: slide;
@@ -36,14 +31,13 @@
       "title"
       "description"
       "image";
-    // "button";
     @media screen and (max-width: 600px) {
       & {
         grid-template-areas:
           "title"
           "image"
           "description";
-          grid-row-gap: 40px;
+        grid-row-gap: 40px;
       }
     }
   }
@@ -55,7 +49,6 @@
     width: 100%;
     object-position: center;
     object-fit: cover;
-
   }
   &__slides {
     display: block;
@@ -70,14 +63,14 @@
     }
     visibility: hidden;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     margin: 40px 0 80px;
     max-width: 460px;
     @media screen and (max-width: 600px) {
       & {
-      margin: 0;
-      max-width: 100%;
-      max-height: 90px;
+        margin: 0;
+        max-width: 100%;
+        max-height: 90px;
       }
     }
   }
@@ -113,7 +106,6 @@
     }
   }
   &__button-slide {
-    z-index: 2;
     cursor: pointer;
     display: inline-block;
     border: 17px solid #ebebeb;

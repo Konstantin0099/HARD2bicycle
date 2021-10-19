@@ -10,187 +10,195 @@
     />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-  <body class="page">
-    <header class="header">
-      <ul class="header__list">
-        <li class="header__item-nav">
-          <a href="#" class="header__nav">Покрытия и градиенты</a>
-        </li>
-        <li class="header__item-nav">
-          <a href="#" class="header__nav">Велосипеды</a>
-        </li>
-        <li class="header__item-nav">
-          <a href="#" class="header__nav">Тренировки</a>
-        </li>
-      </ul>
-    </header>
-
-    <section class="intro">
-      <h2 class="intro__title title">Шоссе, ТТ и Грэвел</h2>
-      <p class="intro__description description">
-        Триатлонные старты, горные серпантины или грейвел заезды по живописным
-        маршрутам – нужно только определиться с выбором велосипеда и отправиться
-        в путь.
-      </p>
-      <a href="#" class="intro__more-detailed-button">Подробнее</a>
-      <p class="intro__bike-name">Cannondale&nbsp;Systemsix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="intro__line">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
-      </p>
-      <img
-        class="intro__image"
-        src="./images/mountainForestRoad.png"
-        alt="mountainForestRoad"
-      />
-      <div class="intro__overlay">
-        <img class="intro__bike-fix" src="./images/cannondale.png" alt="bike" />
-      </div>
-    </section>
-
-    <section class="epigraph">
-      <div class="epigraph__image">
-        <img
-          src="./images/steepTurn.png"
-          alt="дорога извивается между холмами, вдалеке туман, велосипедист едет по дороге"
-          class="epigraph__img"
-        />
-      </div>
-      <figure class="epigraph__quote">
-        <blockquote
-          class="epigraph__blockquote"
-          cite="https://ru.wikipedia.org/wiki/Меркс,_Эдди"
-        >
-          <h4 class="epigraph__title">
-            «Катайся много или мало, долго или коротко, как хочешь - но катайся»
-          </h4>
-        </blockquote>
-        <figcaption class="epigraph__caption">
-          <cite class="epigraph__cite">Эдди Меркс</cite>Велогонщик
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="surfaceAndGradients">
-
-      <div class="surfaceAndGradients__slides">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide surfaceAndGradients__slide">
-            <h2 class="surfaceAndGradients__slide-title title">Шоссе</h2>
-            <p class="surfaceAndGradients__slide-text">
-              На шоссейном велосипеде можно ездить по асфальту на разных
-              градиентах: будь то горы или равнины. Гонки проходят в командном
-              пелотоне, но тренироваться можно и самостоятельно.
-            </p>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <button
+          type="button"
+          class="header__button header__button_openedMenu_lightTheme"
+        ></button>
+        <button
+          type="button"
+          class="
+            header__button
+            header__button_closedMenu_lightTheme
+            header__button_mobile_closed
+          "
+        ></button>
+        <nav class="header__nav header__nav_menu_closed">
+          <ul class="header__list">
+            <li class="header__item-nav">
+              <a href="#" class="header__link">Покрытия и градиенты</a>
+            </li>
+            <li class="header__item-nav">
+              <a href="#" class="header__link">Велосипеды</a>
+            </li>
+            <li class="header__item-nav">
+              <a href="#" class="header__link">Тренировки</a>
+            </li>
+          </ul>
+          <div class="theme-switch theme-switch_header">
+            <div class="theme-switch__sun-icon"></div>
+            <button type="button" class="theme-switch__button-container">
+              <img
+                class="theme-switch__button"
+                src="./images/button/button-theme-switch.svg"
+                alt="круглая кнопка"
+              />
+            </button>
+            <div class="theme-switch__moon-icon"></div>
+          </div>
+        </nav>
+      </header>
+      <main class="content">
+        <section class="intro">
+          <h2 class="intro__title title-text">Шоссе, ТТ и Грэвел</h2>
+          <p class="intro__description description-text">
+            Триатлонные старты, горные серпантины или грейвел заезды по
+            живописным маршрутам – нужно только определиться с выбором
+            велосипеда и отправиться в путь.
+          </p>
+          <a href="#" class="intro__more-detailed-button">Подробнее</a>
+          <p class="intro__bike-name">
+            Cannondale&nbsp;Systemsix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+              class="intro__line"
+              >&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span
+            >
+          </p>
+          <img
+            class="intro__image"
+            src="./images/mountainForestRoad.png"
+            alt="лесная горная дорога"
+          />
+          <div class="intro__overlay">
             <img
-              class="surfaceAndGradients__image"
-              src="./images/serpentineRoad.png"
-              alt="bike"
+              class="intro__bike-fix"
+              src="./images/cannondale.png"
+              alt="велосипед"
             />
           </div>
-          <div class="swiper-slide surfaceAndGradients__slide">
-            <h2 class="surfaceAndGradients__slide-title title">Грэвел</h2>
-            <p class="surfaceAndGradients__slide-text">
-              Грэвел похож на шоссейный велосипед, но конструкция рамы немного
-              отличается, и на нём стоят более широкие покрышки, всё для того
-              чтобы проехать по лёгкому бездорожью.
-            </p>
-            <img
-              class="surfaceAndGradients__image"
-              src="./images/forestRoad.png"
-              alt="bike"
-            />
-          </div>
-          <div class="swiper-slide surfaceAndGradients__slide">
-            <h2 class="surfaceAndGradients__slide-title title">TT</h2>
-            <p class="surfaceAndGradients__slide-text">
-              ТТ — это велосипед для триатлона или раздельного старта, гооняют
-              на таком велике только по равнинному асфальту, велик очень быстрые
-              и аэродинамичный.
-            </p>
-            <img
-              class="surfaceAndGradients__image"
-              src="./images/highway.png"
-              alt="bike"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="surfaceAndGradients__container-button-slide">
-        <div class="surfaceAndGradients__button-slide surfaceAndGradients__button-slide_next"></div>
-        <div class="surfaceAndGradients__button-slide surfaceAndGradients__button-slide_prev"></div>
-      </div>
-     
-    </section>
+        </section>
 
-    <section class="bikes">
-      <div class="bikes__header">
-        <h2 class="title">Велосипеды</h2>
-        <div class="bikes__pagination"></div>
-      </div>
-      <div class="bikes__slides">
-        <div class="swiper-wrapper bikes__slides-group">
-          <div class="swiper-slide bikes__slides-group">
-            <div class="highway-slides"> 
-              <div class="swiper-wrapper">
-                <!-- от сюда  -->
-                <!-- <div class="swiper-slide bike__slide">
-  <a
-    href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J
-    "
-    class="bike__link"
-  >
-    <figure class="bike__card">
-      <img
-        class="bike__image"
-        src="./images/cannondaleSystemsixHimod.png"
-        alt="велосипед Cannondale Systemsix Himod"
-      />
-      <figcaption class="bike__caption">
-        Cannondole Systemsix Himod
-      </figcaption>
-    </figure>
-  </a>
-</div>
-<div class="swiper-slide bike__slide">
-  <a
-    href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-    class="header__lang-link"
-  >
-    <figure class="bike__card">
-      <img
-        class="bike__image"
-        src="./images/carveloCaledonia-5.png"
-        alt="велосипед Carvelo Caledonia-5"
-      />
-      <figcaption class="bike__caption">
-        Carvelo Caledonia-5
-      </figcaption>
-    </figure>
-  </a>
-</div>
+        <section class="epigraph">
+          <!-- <div class="epigraph__image"> </div> -->
+          <img
+            src="./images/steepTurn.png"
+            alt="дорога извивается между холмами, вдалеке туман, велосипедист едет по дороге"
+            class="epigraph__image"
+          />
 
-<div class="swiper-slide bike__slide">
-  <a
-    href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF
-    "
-    class="header__lang-link"
-  >
-    <figure class="bike__card">
-      <img
-        class="bike__image"
-        src="./images/trekDomaneSL-7.png"
-        alt="велосипед Trek DomaneSL-7"
-      />
-      <figcaption class="bike__caption">
-        Trek DomaneSL-7
-      </figcaption>
-    </figure>
-  </a>
-</div> -->
-                <!-- до сюда -->
-                <div class="swiper-slide bike__slide">
+          <figure class="epigraph__quote">
+            <blockquote
+              class="epigraph__blockquote"
+              cite="https://ru.wikipedia.org/wiki/Меркс,_Эдди"
+            >
+              <h4 class="epigraph__title">
+                «Катайся много или мало, долго или коротко, как хочешь - но
+                катайся»
+              </h4>
+            </blockquote>
+            <figcaption class="epigraph__caption">
+              <cite class="epigraph__cite">Эдди Меркс</cite>
+              <span class="epigraph__profi">Велогонщик</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="surfaceAndGradients">
+          <div class="surfaceAndGradients__slides">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide surfaceAndGradients__slide">
+                <h2 class="surfaceAndGradients__slide-title title-text">
+                  Шоссе
+                </h2>
+                <p
+                  class="
+                    surfaceAndGradients__slide-text
+                    description-text description-text_highway
+                  "
+                >
+                  На шоссейном велосипеде можно ездить по асфальту на разных
+                  градиентах: будь то горы или равнины. Гонки проходят в
+                  командном пелотоне, но тренироваться можно и самостоятельно.
+                </p>
+                <img
+                  class="surfaceAndGradients__image"
+                  src="./images/serpentineRoad.png"
+                  alt="извилистая шоссейная дорога"
+                />
+              </div>
+              <div class="swiper-slide surfaceAndGradients__slide">
+                <h2 class="surfaceAndGradients__slide-title title-text">
+                  Грэвел
+                </h2>
+                <p
+                  class="
+                    surfaceAndGradients__slide-text
+                    description-text description-text_grevel
+                  "
+                >
+                  Грэвел похож на шоссейный велосипед, но конструкция рамы
+                  немного отличается, и на нём стоят более широкие покрышки, всё
+                  для того чтобы проехать по лёгкому бездорожью.
+                </p>
+                <img
+                  class="surfaceAndGradients__image"
+                  src="./images/forestRoad.png"
+                  alt="лесная дорога"
+                />
+              </div>
+              <div class="swiper-slide surfaceAndGradients__slide">
+                <h2 class="surfaceAndGradients__slide-title title-text">TT</h2>
+                <p
+                  class="
+                    surfaceAndGradients__slide-text
+                    description-text description-text_TT
+                  "
+                >
+                  ТТ — это велосипед для триатлона или раздельного старта,
+                  гооняют на таком велике только по равнинному асфальту, велик
+                  очень быстрые и аэродинамичный.
+                </p>
+                <img
+                  class="surfaceAndGradients__image"
+                  src="./images/highway.png"
+                  alt="шоссе"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="surfaceAndGradients__container-button-slide">
+            <div
+              class="
+                surfaceAndGradients__button-slide
+                surfaceAndGradients__button-slide_next
+              "
+            ></div>
+            <div
+              class="
+                surfaceAndGradients__button-slide
+                surfaceAndGradients__button-slide_prev
+              "
+            ></div>
+          </div>
+        </section>
+
+        <section class="bikes">
+          <div class="bikes__header">
+            <h2 class="title-text">Велосипеды</h2>
+            <div class="bikes__pagination-container">
+              <div class="bikes__pagination"></div>
+              <div class="bikes__pagination-arrow"></div>
+            </div>
+          </div>
+          <div class="bikes__slides">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slides">
+                <div class="swiper-wrapper bike">
                   <a
                     href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J
                     "
-                    class="bike__link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -203,11 +211,9 @@
                       </figcaption>
                     </figure>
                   </a>
-                </div>
-                <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -220,13 +226,10 @@
                       </figcaption>
                     </figure>
                   </a>
-                </div>
-
-                <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -240,24 +243,15 @@
                     </figure>
                   </a>
                 </div>
+                <div class="slides__swiper-pagination"></div>
               </div>
-              <div class="highway-slides__next"></div>
-              <div
-                class="swiper-paginatio highway-slides__swiper-pagination"
-              ></div>
-              <div class="highway-slides__prev"></div>
-            </div>
-            <!-- <div class="highway-slides__swiper-pagination"></div> -->
-          </div>
-
-          <div class="swiper-slide">
-            <div class="gravel-slides">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide bike__slide">
+              <div class="swiper-slide slides">
+              <!-- <div class="swiper-slide slides"> -->
+                <div class="swiper-wrapper bike">
                   <a
                     href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -270,12 +264,10 @@
                       </figcaption>
                     </figure>
                   </a>
-                </div>
-                <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -288,13 +280,10 @@
                       </figcaption>
                     </figure>
                   </a>
-                </div>
-
-                <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -308,18 +297,15 @@
                     </figure>
                   </a>
                 </div>
+                <div class="slides__swiper-pagination"></div>
               </div>
-              <div class="gravel-slides__swiper-pagination"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="TT-slides">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide bike__slide">
+              <div class="swiper-slide slides">
+              <!-- <div class="swiper-slide slides"> -->
+                <div class="swiper-wrapper bike">
                   <a
                     href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -332,12 +318,10 @@
                       </figcaption>
                     </figure>
                   </a>
-                </div>
-                <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -350,12 +334,10 @@
                       </figcaption>
                     </figure>
                   </a>
-                </div>
-                <div class="swiper-slide bike__slide">
                   <a
                     href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835
                     "
-                    class="header__lang-link"
+                    class="swiper-slide bike__link"
                   >
                     <figure class="bike__card">
                       <img
@@ -369,84 +351,90 @@
                     </figure>
                   </a>
                 </div>
+                <div class="slides__swiper-pagination"></div>
               </div>
-              <div class="TT-slides__swiper-pagination"></div>
             </div>
           </div>
+        </section>
+        <section class="training">
+          <h2 class="training__title title-text training__title_mobile">
+            Тренировки
+          </h2>
+          <div class="training__text">
+            <h2 class="training__title title-text">Тренировки</h2>
+            <p class="training__paragraph description-text">
+              Чтобы найти маршрут для тренировки можно воспользоваться сервисом
+              Komoot, а записать эти тренировки поможет приложение Strava, а
+              также это приложение позволит построить тренировочный план.
+            </p>
+            <ul class="training__links">
+              <li class="training__link">
+                <a href="https://www.strava.com" class="training__link"
+                  >Strava</a
+                >
+              </li>
+              <li class="training__link">
+                <a href="https://www.komoot.com" class="training__link"
+                  >Komoot</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="training__image">
+            <img
+              src="./images/pavedRoadForest.png"
+              alt="асфальтированная дорога в лесу, скрывается за поворотом"
+              class="training__img"
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <form class="footer__input-container" name="form-your-data">
+            <fieldset class="footer__your-data">
+              <legend class="footer__title">Подпишитесь на рассылку -</legend>
+              <div class="footer__input-line footer__input-line_darkTheme">
+                <input
+                  type="email"
+                  class="footer__your-email footer__your-email_darkTheme"
+                  name="your-email"
+                  placeholder="Ваш e-mail"
+                  value=""
+                  autocomplete="off"
+                />
+                <button
+                  type="submit"
+                  class="footer__input-container-button"
+                  type="submit"
+                >
+                  ok
+                </button>
+              </div>
+            </fieldset>
+          </form>
+          <div class="footer__logo-container">
+            <p class="footer__logo">&#169; Road Club 2021</p>
+            <img
+              class="footer__logo-color"
+              src="./images/mobile/logo__COLOR.svg"
+              alt="значек меню настройки"
+            />
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="training">
-      <div class="training__text">
-        <h2 class="training__title">Тренировки</h2>
-        <p class="training__paragraph">
-          Чтобы найти маршрут для тренировки можно воспользоваться сервисом
-          Komoot, а записать эти тренировки поможет приложение Strava, а также
-          это приложение позволит построить тренировочный план.
-        </p>
-        <ul class="training__links">
-          <li class="training__link">
-            <a href="https://www.strava.com" class="training__strava">Strava</a>
-          </li>
-          <li class="training__link">
-            <a href="https://www.komoot.com" class="training__komoot">Komoot</a>
-          </li>
-        </ul>
-      </div>
-      <div class="training__image">
-        <img
-          src="./images/pavedRoadForest.png"
-          alt="асфальтированная дорога в лесу, скрывается за поворотом"
-          class="training__img"
-        />
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__text">
-        <form class="footer__input-container" name="form-your-data">
-          <fieldset class="footer__your-data">
-            <legend class="footer__title">Подпишитесь на рассылку -</legend>
-            <div class="footer__input-line">
-              <input
-                type="text"
-                class="footer__your-email"
-                name="your-email"
-                placeholder="Ваш e-mail"
-                value=""
-              />
-              <button class="footer__input-container-button" type="submit">
-                ok
-              </button>
-            </div>
-          </fieldset>
-        </form>
-        <p class="footer__logo">© Road Club 2021</p>
-      </div>
-
-      <div class="footer__button-theme-switch">
-        <div class="footer__sun"></div>
-        <div class="footer__button-container">
-          <img
-            class="footer__button"
-            src="./images/button/button-theme-switch.svg"
-            alt="круглая кнопка"
-          />
+        <div class="theme-switch theme-switch_mobile">
+          <div class="theme-switch__sun-icon"></div>
+          <button type="button" class="theme-switch__button-container">
+            <img
+              class="theme-switch__button"
+              src="./images/button/button-theme-switch.svg"
+              alt="круглая кнопка"
+            />
+          </button>
+          <div class="theme-switch__moon-icon"></div>
         </div>
-        <div class="footer__moon"></div>
-      </div>
-    </footer>
-
-    <!-- <template id="elementsSection">
-        <div class="element">
-          <button class="trash" type="button"></button>
-          <img class="element__img" src="" alt="" />
-          <h2 class="element__figcaption"></h2>
-          <button class="like" type="button"></button>
-        </div>
-      </template> -->
-
+      </footer>
+    </div>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.js"></script>
     <script src="./scripts/script.js"></script>
   </body>

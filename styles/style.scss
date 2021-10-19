@@ -2,6 +2,7 @@
 @import "./modules/variables.scss";
 @import "./modules/mixins.scss";
 @import "./modules/blocks/page.scss";
+@import "./modules/blocks/content.scss";
 @import "./modules/blocks/header.scss";
 @import "./modules/blocks/epigraph.scss";
 @import "./modules/blocks/surfaceAndGradients.scss";
@@ -10,9 +11,10 @@
 @import "./modules/blocks/training.scss";
 @import "./modules/blocks/footer.scss";
 @import "./modules/blocks/intro.scss";
-@import "./modules/blocks/highway-slides.scss";
-@import "./modules/blocks/TT-slides.scss";
-@import "./modules/blocks/gravel-slides.scss";
-// @import "./modules/blocks/button-slide.scss";
-
-
+@import "./modules/blocks/slides.scss";
+// @import "./modules/blocks/TT-slides.scss";
+// @import "./modules/blocks/gravel-slides.scss";
+@import "./modules/blocks/theme-switch.scss";
+@import "./modules/blocks/body.scss";
+@import "./modules/blocks/title-text.scss";
+@import "./modules/blocks/description-text.scss";
