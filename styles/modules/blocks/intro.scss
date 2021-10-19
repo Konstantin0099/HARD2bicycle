@@ -3,7 +3,7 @@
   display: grid;
   justify-content: flex-end;
   grid-template-columns: 43% 47%;
-  grid-template-rows: 20% 30% 10% 40%;
+  grid-template-rows: 20% 27% 10% 43%;
   grid-row-gap: 0;
   grid-column-gap: 10%;
   grid-template-areas:
@@ -28,8 +28,8 @@
   }
   &__title {
     height: 100%;
-    max-width: 460px;
-    margin: 50px 0 0 0;
+    max-width: 320px;
+    margin-top: 64px;
     grid-area: title;
     display: inline-block;
     @media screen and (max-width: 1230px) {
@@ -55,9 +55,9 @@
   }
 
   &__description {
-    max-width: 400px;
+    max-width: 410px;
     align-self: center;
-    margin: 0px 0 0 0;
+    margin: 0px 0 0px 0;
     grid-area: your-choice;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -105,7 +105,7 @@
     z-index: 1;
     top: 100px;
     position: sticky;
-    margin-bottom: 79px;
+    margin-bottom: 0px;
     margin-top: 200px;
     border-radius: 20px;
     padding: 20px 50px;
@@ -113,7 +113,7 @@
     align-self: center;
     box-sizing: content-box;
     max-width: 340px;
-    transform: translateX(-180px);
+    transform: translateX(-192px);
     @media screen and (max-width: 1030px) {
       & {
         transform: translateX(-100px);
@@ -201,7 +201,7 @@
     }
   }
   &__bike-name {
-    margin: 167px 0 auto 0;
+    margin: 137px 0 auto 0;
     grid-area: bike-name;
     display: block;
     @include font(
