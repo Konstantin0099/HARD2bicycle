@@ -45,7 +45,6 @@ const themeSwitchHeader = header.querySelector(
 );
 
 installEventListenerPaginationOpeningButton(bikesPagination);
-// installEventListenerPaginationOpeningButton(bikesPaginationContainer);
 installEventListenerMenuOpeningButton(buttonHeaderMenuOpened);
 installEventListenerMenuClosedButton(buttonHeaderMenuClosed);
 
@@ -106,7 +105,6 @@ function installEventListenerMenuClosedButton(button) {
 
 function openedMenuPagination(button) {
   button.classList.toggle("bikes__pagination_opened");
-  // button.classList.toggle("bikes__pagination-container_opened");
 }
 
 function clickButtonOpenedClosedMenu() {

@@ -1,14 +1,14 @@
 .page {
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   width: 100%;
   max-width: 1440px;
-  min-width: 280px;
+  min-width: 300px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: $backgroundColor;
   color: $colorTitle;

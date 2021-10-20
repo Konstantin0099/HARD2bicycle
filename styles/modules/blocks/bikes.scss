@@ -11,7 +11,7 @@
     align-items: center;
     @media screen and (max-width: 600px) {
       & {
-        margin-bottom: 10px; // margin-bottom: 50px;
+        margin-bottom: 10px;
         flex-direction: column;
         align-items: flex-start;
       }
@@ -58,18 +58,13 @@
       $opacity: 1
     );
     @media screen and (max-width: 600px) {
-    
       & {
-        // transform: translateY(-40px);
-        // transition-duration: 1s;
         overflow: hidden;
         padding-top: 4px;
         padding-bottom: 4px;
         box-sizing: border-box;
         border: solid 1px #e3e3e3;
         border-radius: 4px;
-        // width: 100%;
-        // width: 105px;
         position: absolute;
         top: 7px;
         left: 6px;
@@ -80,7 +75,6 @@
         visibility: visible;
         flex-direction: column;
         flex-wrap: nowrap;
-        // height: 80px;
         margin: 0px;
         max-width: 250px;
         &::after {
@@ -90,7 +84,7 @@
           content: "";
           height: 7px;
           width: 14px;
-          background-image: url("../../../images/mobile/chooseBike.svg");
+          background-image: url("../images/mobile/chooseBike.svg");
           background-repeat: no-repeat;
           background-size: cover;
         }
@@ -102,7 +96,7 @@
             content: "";
             height: 7px;
             width: 14px;
-            background-image: url("../../../images/mobile/chooseBikeDarkTheme.svg");
+            background-image: url("../images/mobile/chooseBikeDarkTheme.svg");
             background-repeat: no-repeat;
             background-size: cover;
           }
@@ -110,10 +104,7 @@
       }
       &_opened {
         height: 75%;
-        // transform: translateY(0px);
-        // transition-duration: 1s;
       }
-
     }
     &_dark {
       color: #ffffff;
@@ -129,7 +120,6 @@
     &-container {
       z-index: 10;
       position: relative;
-      // margin-top: auto;
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
@@ -142,43 +132,14 @@
           height: 80px;
           border-bottom: solid 1px #e3e3e3;
           top: 40px;
-          // margin-bottom: 20px;
-          // padding: 8px 10px 10px 8px;
-          // border: solid 1px #e3e3e3;
-          // border-radius: 2px;
           width: 105px;
         }
-        // &::after {
-        //   position: absolute;
-        //   top: 6px;
-        //   right: 0px;
-        //   content: "";
-        //   height: 7px;
-        //   width: 14px;
-        //   background-image: url("../../../images/mobile/chooseBike.svg");
-        //   background-repeat: no-repeat;
-        //   background-size: cover;
-        // }
-        // &_darkTheme {
-        //   &::after {
-        //     position: absolute;
-        //     top: 6px;
-        //     right: 0px;
-        //     content: "";
-        //     height: 7px;
-        //     width: 14px;
-        //     background-image: url("../../../images/mobile/chooseBikeDarkTheme.svg");
-        //     background-repeat: no-repeat;
-        //     background-size: cover;
-        //   }
-        // }
       }
       &_opened {
         visibility: visible;
         @media screen and (max-width: 600px) {
           & {
             height: 80px;
-            // margin-bottom: 10px;
           }
         }
       }
